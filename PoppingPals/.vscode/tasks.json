@@ -1,0 +1,720 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "PoppingPals Mac Debug Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPals",
+				"Mac",
+				"Debug",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "PoppingPals Mac Debug Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPals",
+				"Mac",
+				"Debug",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"PoppingPals Mac Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "PoppingPals Mac Debug Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPals",
+				"Mac",
+				"Debug",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "PoppingPals Mac DebugGame Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPals",
+				"Mac",
+				"DebugGame",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "PoppingPals Mac DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPals",
+				"Mac",
+				"DebugGame",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"PoppingPals Mac DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "PoppingPals Mac DebugGame Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPals",
+				"Mac",
+				"DebugGame",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "PoppingPals Mac Development Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPals",
+				"Mac",
+				"Development",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "PoppingPals Mac Development Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPals",
+				"Mac",
+				"Development",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"PoppingPals Mac Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "PoppingPals Mac Development Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPals",
+				"Mac",
+				"Development",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "PoppingPals Mac Test Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPals",
+				"Mac",
+				"Test",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "PoppingPals Mac Test Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPals",
+				"Mac",
+				"Test",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"PoppingPals Mac Test Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "PoppingPals Mac Test Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPals",
+				"Mac",
+				"Test",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "PoppingPals Mac Shipping Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPals",
+				"Mac",
+				"Shipping",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "PoppingPals Mac Shipping Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPals",
+				"Mac",
+				"Shipping",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"PoppingPals Mac Shipping Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "PoppingPals Mac Shipping Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPals",
+				"Mac",
+				"Shipping",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "PoppingPals IOS Debug Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPals",
+				"IOS",
+				"Debug",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "PoppingPals IOS Debug Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPals",
+				"IOS",
+				"Debug",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"PoppingPals IOS Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "PoppingPals IOS Debug Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPals",
+				"IOS",
+				"Debug",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "PoppingPals IOS DebugGame Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPals",
+				"IOS",
+				"DebugGame",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "PoppingPals IOS DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPals",
+				"IOS",
+				"DebugGame",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"PoppingPals IOS DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "PoppingPals IOS DebugGame Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPals",
+				"IOS",
+				"DebugGame",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "PoppingPals IOS Development Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPals",
+				"IOS",
+				"Development",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "PoppingPals IOS Development Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPals",
+				"IOS",
+				"Development",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"PoppingPals IOS Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "PoppingPals IOS Development Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPals",
+				"IOS",
+				"Development",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "PoppingPals IOS Test Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPals",
+				"IOS",
+				"Test",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "PoppingPals IOS Test Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPals",
+				"IOS",
+				"Test",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"PoppingPals IOS Test Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "PoppingPals IOS Test Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPals",
+				"IOS",
+				"Test",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "PoppingPals IOS Shipping Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPals",
+				"IOS",
+				"Shipping",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "PoppingPals IOS Shipping Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPals",
+				"IOS",
+				"Shipping",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"PoppingPals IOS Shipping Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "PoppingPals IOS Shipping Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPals",
+				"IOS",
+				"Shipping",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "PoppingPalsEditor Mac Debug Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPalsEditor",
+				"Mac",
+				"Debug",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "PoppingPalsEditor Mac Debug Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPalsEditor",
+				"Mac",
+				"Debug",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"PoppingPalsEditor Mac Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "PoppingPalsEditor Mac Debug Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPalsEditor",
+				"Mac",
+				"Debug",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "PoppingPalsEditor Mac DebugGame Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPalsEditor",
+				"Mac",
+				"DebugGame",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "PoppingPalsEditor Mac DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPalsEditor",
+				"Mac",
+				"DebugGame",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"PoppingPalsEditor Mac DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "PoppingPalsEditor Mac DebugGame Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPalsEditor",
+				"Mac",
+				"DebugGame",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "PoppingPalsEditor Mac Development Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPalsEditor",
+				"Mac",
+				"Development",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "PoppingPalsEditor Mac Development Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPalsEditor",
+				"Mac",
+				"Development",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"PoppingPalsEditor Mac Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		},
+		{
+			"label": "PoppingPalsEditor Mac Development Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"PoppingPalsEditor",
+				"Mac",
+				"Development",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/PoppingPals.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_5.2"
+			}
+		}
+	]
+}
