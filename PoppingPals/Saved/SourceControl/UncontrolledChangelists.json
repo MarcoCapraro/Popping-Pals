@@ -7,7 +7,8 @@
 			"files": [
 				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Content/Maps/DemoMap.umap",
 				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Content/Blueprints/Pawns/BP_PoppingPal.uasset",
-				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Content/Blueprints/GameMode/BP_PoppingPalsGameModeBase.uasset"
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Content/Blueprints/GameMode/BP_PoppingPalsGameModeBase.uasset",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Content/Blueprints/PlayerController/BP_PoppingPalPlayerController.uasset"
 			]
 		}
 	]
