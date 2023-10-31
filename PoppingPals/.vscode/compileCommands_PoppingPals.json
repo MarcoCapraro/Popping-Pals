@@ -54,5 +54,21 @@
             "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
             "@/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/.vscode/compileCommands_PoppingPals/PoppingPals.253.rsp"
         ]
+    },
+    {
+        "file": "/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Source/PoppingPals/PoppingPalPlayerController.cpp",
+        "directory": "/Users/Shared/Epic Games/UE_5.2/Engine/Source",
+        "arguments": [
+            "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+            "@/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/.vscode/compileCommands_PoppingPals/PoppingPals.253.rsp"
+        ]
+    },
+    {
+        "file": "/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Source/PoppingPals/PoppingPalPlayerController.h",
+        "directory": "/Users/Shared/Epic Games/UE_5.2/Engine/Source",
+        "arguments": [
+            "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+            "@/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/.vscode/compileCommands_PoppingPals/PoppingPals.253.rsp"
+        ]
     }
 ]
