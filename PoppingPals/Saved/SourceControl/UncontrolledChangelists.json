@@ -6,14 +6,24 @@
 			"description": "Default Uncontrolled Changelist",
 			"files": [
 				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Content/Maps/DemoMap.umap",
-				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Content/Blueprints/Pawns/BP_PoppingPal.uasset",
 				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Content/Blueprints/GameMode/BP_PoppingPalsGameModeBase.uasset",
-				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Content/Blueprints/PlayerController/BP_PoppingPalPlayerController.uasset",
 				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Content/Assets/Meshes/Popping-Pal.uasset",
 				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Content/Assets/Materials/Black.uasset",
 				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Content/Assets/Materials/Eyes.uasset",
 				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Content/Assets/Materials/Platinum.uasset",
-				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Content/Assets/Materials/Skin.uasset"
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Content/Assets/Materials/Skin.uasset",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Content/Assets/Black.uasset",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Content/Assets/Material.uasset",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Content/Assets/Skin.uasset",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Content/Assets/Eyes.uasset",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Content/Assets/Popping-Pal.uasset",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Content/Assets/Popping-Pal_Skeleton.uasset",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Content/Assets/Popping-Pal_PhysicsAsset.uasset",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Content/Blueprints/Character/BP_PopPal.uasset",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Content/Blueprints/Character/BP_Test.uasset",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Content/Blueprints/Actors/BP_CameraManager.uasset",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Content/Blueprints/Pawns/BP_PoppingPal.uasset",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Content/Blueprints/PlayerController/BP_PoppingPalPlayerController.uasset"
 			]
 		}
 	]
