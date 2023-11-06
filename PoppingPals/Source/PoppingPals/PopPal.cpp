@@ -10,12 +10,17 @@
 #include "Kismet/GameplayStatics.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "Projectile.h"
 
 // Sets default values
 APopPal::APopPal()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+	
+	characterMesh = FindComponentByClass<USkeletalMeshComponent>();
+	projectileSpawnComp = CreateDefaultSubobject<USceneComponent>(TEXT("Projectile Spawn"));
+	projectileSpawnComp->SetupAttachment(characterMesh);
 
 	bUseControllerRotationYaw = false;
 	bUseControllerRotationPitch = false;
@@ -50,6 +55,7 @@ void APopPal::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 	PlayerInputComponent->BindAxis("MoveForward", this, &APopPal::MoveForward);
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &APopPal::Jump);
+	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &APopPal::Fire);
 
 }
 
@@ -70,4 +76,16 @@ void APopPal::Jump()
 {
 	bPressedJump = true;
 	JumpKeyHoldTime = 0.0f;
+}
+
+void APopPal::Fire()
+{
+	DrawDebugSphere(GetWorld(), projectileSpawnComp->GetComponentLocation(), 10.0f, 15, FColor::Red, false, 3.0f);
+	FVector spawnLoc = projectileSpawnComp->GetComponentLocation();
+	FRotator spawnRot = projectileSpawnComp->GetComponentRotation();
+
+	// // auto keywords implicitly finds the type that needs to be assigned from the expression
+	AProjectile* projectile = GetWorld()->SpawnActor<AProjectile>(projectileClass, spawnLoc, spawnRot);
+	// // This will allow us down the line to get the instance of the owner that "owns" that projectile
+	projectile->SetOwner(this);
 }

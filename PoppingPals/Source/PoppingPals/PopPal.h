@@ -20,6 +20,15 @@ protected:
 	virtual void BeginPlay() override;
 
 private:
+	UPROPERTY(VisibleAnywhere)
+	class USkeletalMeshComponent* characterMesh;
+
+	UPROPERTY(VisibleAnywhere)
+	class USceneComponent* projectileSpawnComp;
+
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<class AProjectile> projectileClass;
+
 	UPROPERTY(EditAnywhere, Category="Movement")
 	float moveSpeed = 100.0f;
 
@@ -28,6 +37,7 @@ private:
 
 	void MoveForward(float value);
 	void Jump();
+	void Fire();
 
 public:	
 	// Called every frame
