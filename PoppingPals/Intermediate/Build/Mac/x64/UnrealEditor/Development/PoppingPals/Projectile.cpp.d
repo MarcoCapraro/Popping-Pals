@@ -3801,19 +3801,38 @@
   /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Intermediate/Build/Mac/UnrealEditor/Inc/PoppingPals/UHT/Projectile.generated.h \
   Runtime/CoreUObject/Public/UObject/ObjectMacros.h \
   Runtime/CoreUObject/Public/UObject/ScriptMacros.h \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Source/PoppingPals/PopPal.h \
+  Runtime/Engine/Classes/GameFramework/Character.h \
+  Runtime/CoreUObject/Public/UObject/UObjectGlobals.h \
+  Runtime/CoreUObject/Public/Templates/SubclassOf.h \
+  Runtime/CoreUObject/Public/UObject/CoreNet.h \
+  Runtime/Engine/Classes/Engine/NetSerialization.h \
+  Runtime/Engine/Classes/Engine/EngineTypes.h \
+  Runtime/Engine/Classes/Components/ActorComponent.h \
+  Runtime/Engine/Classes/GameFramework/Pawn.h \
+  Runtime/Engine/Classes/GameFramework/CharacterMovementReplication.h \
+  Runtime/CoreUObject/Public/UObject/Object.h \
+  Runtime/Core/Public/Serialization/BitWriter.h \
+  Runtime/Core/Public/Containers/BitArray.h \
+  Runtime/Experimental/Iris/Core/Public/Iris/Serialization/IrisObjectReferencePackageMap.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/IrisCore/UHT/IrisObjectReferencePackageMap.generated.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/CharacterMovementReplication.generated.h \
+  Runtime/Engine/Classes/Animation/AnimationAsset.h \
+  Runtime/Engine/Classes/GameFramework/RootMotionSource.h \
+  Runtime/Core/Public/HAL/IConsoleManager.h \
+  Runtime/CoreUObject/Public/UObject/Class.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/RootMotionSource.generated.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/Character.generated.h \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Intermediate/Build/Mac/UnrealEditor/Inc/PoppingPals/UHT/PopPal.generated.h \
   Runtime/Engine/Classes/Components/StaticMeshComponent.h \
   Runtime/Engine/Classes/GameFramework/ProjectileMovementComponent.h \
   Runtime/Engine/Classes/Engine/HitResult.h \
   Runtime/Engine/Classes/GameFramework/MovementComponent.h \
-  Runtime/Engine/Classes/Engine/EngineTypes.h \
   Runtime/PhysicsCore/Public/Chaos/ChaosEngineInterface.h \
-  Runtime/Engine/Classes/Components/ActorComponent.h \
   Runtime/Engine/Classes/Components/SceneComponent.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/MovementComponent.generated.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/ProjectileMovementComponent.generated.h \
   Runtime/Engine/Classes/Kismet/GameplayStatics.h \
-  Runtime/CoreUObject/Public/UObject/Object.h \
-  Runtime/CoreUObject/Public/Templates/SubclassOf.h \
   Runtime/CoreUObject/Public/UObject/Interface.h \
   Runtime/Engine/Public/CollisionQueryParams.h \
   Runtime/Engine/Classes/Engine/LatentActionManager.h \
@@ -3833,7 +3852,6 @@
   Runtime/CoreUObject/Public/UObject/TopLevelAssetPath.h \
   Runtime/Engine/Classes/Engine/CollisionProfile.h \
   Runtime/CoreUObject/Public/AssetRegistry/ARFilter.h \
-  Runtime/CoreUObject/Public/UObject/Class.h \
   Runtime/CoreUObject/Public/UObject/SoftObjectPath.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/KismetSystemLibrary.generated.h \
   Runtime/Engine/Classes/Sound/DialogueTypes.h \

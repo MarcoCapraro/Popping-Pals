@@ -52,6 +52,10 @@ void EmptyLinkFunctionForGeneratedCodePopPal() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_jumpForce_MetaData[];
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_jumpForce;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_projectileCount_MetaData[];
+#endif
+		static const UECodeGen_Private::FUnsizedIntPropertyParams NewProp_projectileCount;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -104,12 +108,22 @@ void EmptyLinkFunctionForGeneratedCodePopPal() {}
 	};
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APopPal_Statics::NewProp_jumpForce = { "jumpForce", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(APopPal, jumpForce), METADATA_PARAMS(Z_Construct_UClass_APopPal_Statics::NewProp_jumpForce_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APopPal_Statics::NewProp_jumpForce_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APopPal_Statics::NewProp_projectileCount_MetaData[] = {
+		{ "Category", "PopPal" },
+		{ "Comment", "// Used as a Firing Condition\n" },
+		{ "ModuleRelativePath", "PopPal.h" },
+		{ "ToolTip", "Used as a Firing Condition" },
+	};
+#endif
+	const UECodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_APopPal_Statics::NewProp_projectileCount = { "projectileCount", nullptr, (EPropertyFlags)0x0010000000020001, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(APopPal, projectileCount), METADATA_PARAMS(Z_Construct_UClass_APopPal_Statics::NewProp_projectileCount_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APopPal_Statics::NewProp_projectileCount_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APopPal_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APopPal_Statics::NewProp_characterMesh,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APopPal_Statics::NewProp_projectileSpawnComp,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APopPal_Statics::NewProp_projectileClass,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APopPal_Statics::NewProp_moveSpeed,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APopPal_Statics::NewProp_jumpForce,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APopPal_Statics::NewProp_projectileCount,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_APopPal_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<APopPal>::IsAbstract,
@@ -148,9 +162,9 @@ void EmptyLinkFunctionForGeneratedCodePopPal() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_PopPal_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_APopPal, APopPal::StaticClass, TEXT("APopPal"), &Z_Registration_Info_UClass_APopPal, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APopPal), 4006156974U) },
+		{ Z_Construct_UClass_APopPal, APopPal::StaticClass, TEXT("APopPal"), &Z_Registration_Info_UClass_APopPal, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APopPal), 1612868923U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_PopPal_h_182936601(TEXT("/Script/PoppingPals"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_PopPal_h_1928121562(TEXT("/Script/PoppingPals"),
 		Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_PopPal_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_PopPal_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

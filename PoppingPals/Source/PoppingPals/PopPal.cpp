@@ -55,7 +55,7 @@ void APopPal::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 	PlayerInputComponent->BindAxis("MoveForward", this, &APopPal::MoveForward);
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &APopPal::Jump);
-	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &APopPal::Fire);
+	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &APopPal::CheckFireCondition);
 
 }
 
@@ -78,6 +78,13 @@ void APopPal::Jump()
 	JumpKeyHoldTime = 0.0f;
 }
 
+void APopPal::CheckFireCondition()
+{
+	if(projectileCount < 1) {
+		Fire();
+	}
+}
+
 void APopPal::Fire()
 {
 	DrawDebugSphere(GetWorld(), projectileSpawnComp->GetComponentLocation(), 10.0f, 15, FColor::Red, false, 3.0f);
@@ -86,6 +93,7 @@ void APopPal::Fire()
 
 	// // auto keywords implicitly finds the type that needs to be assigned from the expression
 	AProjectile* projectile = GetWorld()->SpawnActor<AProjectile>(projectileClass, spawnLoc, spawnRot);
+	projectileCount++;
 	// // This will allow us down the line to get the instance of the owner that "owns" that projectile
 	projectile->SetOwner(this);
 }

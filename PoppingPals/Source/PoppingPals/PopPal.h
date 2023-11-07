@@ -38,12 +38,16 @@ private:
 	void MoveForward(float value);
 	void Jump();
 	void Fire();
+	void CheckFireCondition();
 
 public:	
+	// Used as a Firing Condition
+	UPROPERTY(VisibleAnywhere)
+	int projectileCount = 0;
+
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
 };
