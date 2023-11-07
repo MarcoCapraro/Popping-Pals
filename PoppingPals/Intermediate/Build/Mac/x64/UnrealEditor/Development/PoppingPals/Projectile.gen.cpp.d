@@ -3801,4 +3801,5 @@
   Runtime/Engine/Classes/GameFramework/Actor.h \
   /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Intermediate/Build/Mac/UnrealEditor/Inc/PoppingPals/UHT/Projectile.generated.h \
   Runtime/CoreUObject/Public/UObject/ObjectMacros.h \
-  Runtime/CoreUObject/Public/UObject/ScriptMacros.h
+  Runtime/CoreUObject/Public/UObject/ScriptMacros.h \
+  ../Shaders/Shared/../../Source/Runtime/Engine/Classes/Engine/HitResult.h

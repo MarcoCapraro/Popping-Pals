@@ -20,12 +20,17 @@ protected:
 	virtual void BeginPlay() override;
 
 private:
+	class APopPal* popPal;
 
 	UPROPERTY(EditDefaultsOnly, Category="Combat")
 	class UStaticMeshComponent* projectileMesh;
 
 	UPROPERTY(EditDefaultsOnly, Category="Movement")
 	class UProjectileMovementComponent* projectileMovement;
+
+	// Use UFUNCTION to define a method that can be bound to a delegate or a timer
+	UFUNCTION()
+	void OnHit(UPrimitiveComponent* hitComp, AActor* otherActor, UPrimitiveComponent* otherComp, FVector normalImpulse, const FHitResult& hitResult);
 
 public:	
 	// Called every frame
