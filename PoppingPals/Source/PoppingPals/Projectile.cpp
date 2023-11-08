@@ -30,8 +30,7 @@ void AProjectile::BeginPlay()
 	// Get access to the popPal controlled by the player
 	popPal = Cast<APopPal>(UGameplayStatics::GetPlayerCharacter(this, 0));
 
-	projectileMesh->OnComponentHit.AddDynamic(this, &AProjectile::OnHit);
-	
+	projectileMesh->OnComponentHit.AddDynamic(this, &AProjectile::OnHit);	
 }
 
 // Called every frame
