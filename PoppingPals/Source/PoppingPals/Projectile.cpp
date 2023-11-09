@@ -3,6 +3,7 @@
 
 #include "Projectile.h"
 #include "PopPal.h"
+#include "Components/CapsuleComponent.h"
 #include "Components/StaticMeshComponent.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Kismet/GameplayStatics.h"
@@ -13,8 +14,11 @@ AProjectile::AProjectile()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	projectileCollider = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Projectile Collider"));
+	RootComponent = projectileCollider;
+
 	projectileMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Projectile Mesh"));
-	RootComponent = projectileMesh;
+	projectileMesh->SetupAttachment(projectileCollider);
 
 	projectileMovement = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("Projectile Movement"));
 	projectileMovement->MaxSpeed = 1000.0f;
@@ -29,8 +33,7 @@ void AProjectile::BeginPlay()
 
 	// Get access to the popPal controlled by the player
 	popPal = Cast<APopPal>(UGameplayStatics::GetPlayerCharacter(this, 0));
-
-	projectileMesh->OnComponentHit.AddDynamic(this, &AProjectile::OnHit);	
+	projectileCollider->OnComponentHit.AddDynamic(this, &AProjectile::OnHit);	
 }
 
 // Called every frame

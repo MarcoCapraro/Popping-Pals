@@ -22,7 +22,10 @@ protected:
 private:
 	class APopPal* popPal;
 
-	UPROPERTY(EditDefaultsOnly, Category="Combat")
+	UPROPERTY(VisibleAnywhere, Category="Components")
+	class UCapsuleComponent* projectileCollider;
+
+	UPROPERTY(EditDefaultsOnly, Category="Components")
 	class UStaticMeshComponent* projectileMesh;
 
 	UPROPERTY(EditDefaultsOnly, Category="Movement")

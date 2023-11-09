@@ -36,6 +36,9 @@ protected:
 
 private:
 	UPROPERTY(VisibleAnywhere, Category="Component")
+	class UCapsuleComponent* ballCollider;
+
+	UPROPERTY(VisibleAnywhere, Category="Component")
 	class UStaticMeshComponent* ballMesh;
 
 	UPROPERTY(EditAnywhere, Category="Movement")
