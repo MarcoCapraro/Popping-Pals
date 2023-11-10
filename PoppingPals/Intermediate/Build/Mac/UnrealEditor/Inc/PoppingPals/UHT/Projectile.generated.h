@@ -20,12 +20,12 @@ struct FHitResult;
 #define FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_Projectile_h_12_SPARSE_DATA
 #define FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_Projectile_h_12_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execOnHit);
+	DECLARE_FUNCTION(execOnOverlapBegin);
 
 
 #define FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_Projectile_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execOnHit);
+	DECLARE_FUNCTION(execOnOverlapBegin);
 
 
 #define FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_Projectile_h_12_ACCESSORS
