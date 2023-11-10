@@ -48,7 +48,8 @@ void AProjectile::Tick(float DeltaTime)
 
 }
 
-void AProjectile::OnOverlapBegin(UPrimitiveComponent* overlappedComponent, AActor* otherActor, UPrimitiveComponent* otherComp, int32 otherBodyIndex, bool bFromSweep, const FHitResult& sweepResult)
+void AProjectile::OnOverlapBegin(UPrimitiveComponent* overlappedComponent, AActor* otherActor, 
+UPrimitiveComponent* otherComp, int32 otherBodyIndex, bool bFromSweep, const FHitResult& sweepResult)
 {
 	// Make sure not to damage ourselves (the projectile)
 	// Make sure not to damage the owner (the player)

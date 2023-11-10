@@ -66,7 +66,7 @@ protected:
 	bool bAllowStartImpulse = false;
 
 	// Using a bp class reference taken from the child classes spawn a new ball
-	void SplitBallEnemy(TSubclassOf<ABaseEnemy> classRef);
+	void SplitBallEnemy(TSubclassOf<ABaseEnemy> classRef, float lastVelocityZ);
 
 	// Applys an impulse to a capsule component in both the vertical and horizontal directions
 	void ApplyStartImpulse(UCapsuleComponent* enemyCollider, FVector vertImpulse, FVector hozImpulse);
