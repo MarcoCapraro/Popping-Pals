@@ -17,19 +17,19 @@ struct FHitResult;
 #endif
 #define POPPINGPALS_BaseEnemy_generated_h
 
-#define FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_27_SPARSE_DATA
-#define FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_27_RPC_WRAPPERS \
+#define FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_37_SPARSE_DATA
+#define FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_37_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execOnHit);
 
 
-#define FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_27_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_37_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execOnHit);
 
 
-#define FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_27_ACCESSORS
-#define FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_27_INCLASS_NO_PURE_DECLS \
+#define FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_37_ACCESSORS
+#define FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_37_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesABaseEnemy(); \
 	friend struct Z_Construct_UClass_ABaseEnemy_Statics; \
@@ -38,7 +38,7 @@ public: \
 	DECLARE_SERIALIZER(ABaseEnemy)
 
 
-#define FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_27_INCLASS \
+#define FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_37_INCLASS \
 private: \
 	static void StaticRegisterNativesABaseEnemy(); \
 	friend struct Z_Construct_UClass_ABaseEnemy_Statics; \
@@ -47,7 +47,7 @@ public: \
 	DECLARE_SERIALIZER(ABaseEnemy)
 
 
-#define FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_27_STANDARD_CONSTRUCTORS \
+#define FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_37_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ABaseEnemy(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ABaseEnemy) \
@@ -61,7 +61,7 @@ public: \
 	NO_API virtual ~ABaseEnemy();
 
 
-#define FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_27_ENHANCED_CONSTRUCTORS \
+#define FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_37_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ABaseEnemy(ABaseEnemy&&); \
@@ -73,27 +73,27 @@ public: \
 	NO_API virtual ~ABaseEnemy();
 
 
-#define FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_24_PROLOG
-#define FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_27_GENERATED_BODY_LEGACY \
+#define FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_34_PROLOG
+#define FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_37_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_27_SPARSE_DATA \
-	FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_27_RPC_WRAPPERS \
-	FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_27_ACCESSORS \
-	FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_27_INCLASS \
-	FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_27_STANDARD_CONSTRUCTORS \
+	FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_37_SPARSE_DATA \
+	FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_37_RPC_WRAPPERS \
+	FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_37_ACCESSORS \
+	FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_37_INCLASS \
+	FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_37_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_27_GENERATED_BODY \
+#define FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_37_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_27_SPARSE_DATA \
-	FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_27_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_27_ACCESSORS \
-	FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_27_INCLASS_NO_PURE_DECLS \
-	FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_27_ENHANCED_CONSTRUCTORS \
+	FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_37_SPARSE_DATA \
+	FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_37_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_37_ACCESSORS \
+	FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_37_INCLASS_NO_PURE_DECLS \
+	FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_37_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -114,11 +114,22 @@ template<> POPPINGPALS_API UEnum* StaticEnum<EStartDirection>();
 
 #define FOREACH_ENUM_EBOUNCEHEIGHT(op) \
 	op(EBounceHeight::HIGH) \
-	op(EBounceHeight::MID) \
+	op(EBounceHeight::MIDHIGH) \
+	op(EBounceHeight::MIDLOW) \
 	op(EBounceHeight::LOW) 
 
 enum class EBounceHeight;
 template<> struct TIsUEnumClass<EBounceHeight> { enum { Value = true }; };
 template<> POPPINGPALS_API UEnum* StaticEnum<EBounceHeight>();
+
+#define FOREACH_ENUM_EENEMYTIER(op) \
+	op(EEnemyTier::FOUR) \
+	op(EEnemyTier::THREE) \
+	op(EEnemyTier::TWO) \
+	op(EEnemyTier::ONE) 
+
+enum class EEnemyTier;
+template<> struct TIsUEnumClass<EEnemyTier> { enum { Value = true }; };
+template<> POPPINGPALS_API UEnum* StaticEnum<EEnemyTier>();
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

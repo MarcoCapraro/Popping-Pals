@@ -3824,6 +3824,16 @@
   ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/RootMotionSource.generated.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/Character.generated.h \
   /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Intermediate/Build/Mac/UnrealEditor/Inc/PoppingPals/UHT/PopPal.generated.h \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Source/PoppingPals/BaseEnemy.h \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Intermediate/Build/Mac/UnrealEditor/Inc/PoppingPals/UHT/BaseEnemy.generated.h \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Source/PoppingPals/EnemyT4.h \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Intermediate/Build/Mac/UnrealEditor/Inc/PoppingPals/UHT/EnemyT4.generated.h \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Source/PoppingPals/EnemyT3.h \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Intermediate/Build/Mac/UnrealEditor/Inc/PoppingPals/UHT/EnemyT3.generated.h \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Source/PoppingPals/EnemyT2.h \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Intermediate/Build/Mac/UnrealEditor/Inc/PoppingPals/UHT/EnemyT2.generated.h \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Source/PoppingPals/EnemyT1.h \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Intermediate/Build/Mac/UnrealEditor/Inc/PoppingPals/UHT/EnemyT1.generated.h \
   Runtime/Engine/Classes/Components/CapsuleComponent.h \
   Runtime/Engine/Classes/Components/ShapeComponent.h \
   Runtime/Engine/Classes/Components/PrimitiveComponent.h \

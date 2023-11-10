@@ -36,28 +36,17 @@ ABaseEnemy::ABaseEnemy()
 	ballMesh->SetCollisionProfileName("NoCollision");
 }
 
+// Handles the popping (destruction) of the ball enemy
+void ABaseEnemy::HandleDestruction()
+{
+	// Setup death particles, sound, and potential camera shake here
+	// Setup the spawning of the next tier of balls (if not Tier 1)
+}
+
 // Called when the game starts or when spawned
 void ABaseEnemy::BeginPlay()
 {
 	Super::BeginPlay();
-	
-	// Start the game by sending the ball in a horizontal direction (left or right)
-	FVector forwardVector = this->GetActorForwardVector();
-	FVector impulseToAdd = (forwardVector * forwardImpulse * ballCollider->GetMass());
-
-	switch(startDir) {
-		case EStartDirection::RIGHT:
-			impulseToAdd *= -1;
-			break;
-		case EStartDirection::LEFT:
-			impulseToAdd *= 1;
-			break;
-		default:
-			break;
-	}
-
-	UE_LOG(LogTemp, Warning, TEXT("Impulse Added = %s"), *impulseToAdd.ToString());
-	ballCollider->AddImpulse(impulseToAdd);
 
 	// Setup Interaction with Floor (Add Predetermined Impulse to Return to same height every time)
 	ballCollider->OnComponentHit.AddDynamic(this, &ABaseEnemy::OnHit);	
@@ -79,13 +68,16 @@ void ABaseEnemy::OnHit(UPrimitiveComponent* hitComp, AActor* otherActor, UPrimit
 
 		switch(bounceHeight) {
 			case EBounceHeight::HIGH:
-				newVelocity.Z = 1400.0f;
-				break;
-			case EBounceHeight::MID:
 				newVelocity.Z = 1200.0f;
 				break;
+			case EBounceHeight::MIDHIGH:
+				newVelocity.Z = 1000.0f;
+				break;
+			case EBounceHeight::MIDLOW:
+				newVelocity.Z = 1000.0f;
+				break;
 			case EBounceHeight::LOW:
-				newVelocity.Z = 900.0f;
+				newVelocity.Z = 800.0f;
 				break;
 			default:
 				break;
@@ -95,6 +87,32 @@ void ABaseEnemy::OnHit(UPrimitiveComponent* hitComp, AActor* otherActor, UPrimit
         // Set the new velocity
         ballCollider->SetPhysicsLinearVelocity(newVelocity);
 	}
+}
+
+void ABaseEnemy::SplitBallEnemy(TSubclassOf<ABaseEnemy> classRef)
+{
+	FVector spawnLoc = this->GetActorLocation();
+	FRotator spawnRot = this->GetActorRotation();
+
+	ABaseEnemy* enemySpawnLeft = GetWorld()->SpawnActor<ABaseEnemy>(classRef, spawnLoc, spawnRot);
+	ABaseEnemy* enemySpawnRight = GetWorld()->SpawnActor<ABaseEnemy>(classRef, spawnLoc, spawnRot);
+
+	// Get enemy colliders
+	UCapsuleComponent* eLeftCollider = enemySpawnLeft->GetComponentByClass<UCapsuleComponent>();
+	UCapsuleComponent* eRightCollider = enemySpawnRight->GetComponentByClass<UCapsuleComponent>();
+
+	// Add the starting Vertical and Horizontal Impulse
+	FVector vertImpulse = (this->upwardImpulse * this->GetActorUpVector() * eLeftCollider->GetMass());
+	FVector hozImpulse = (this->forwardImpulse * this->GetActorForwardVector() * eLeftCollider->GetMass());
+
+	ApplyStartImpulse(eLeftCollider, vertImpulse, hozImpulse);
+	ApplyStartImpulse(eRightCollider, vertImpulse, -hozImpulse);
+}
+
+void ABaseEnemy::ApplyStartImpulse(UCapsuleComponent* enemyCollider, FVector vertImpulse, FVector hozImpulse)
+{
+    enemyCollider->AddImpulse(vertImpulse);
+    enemyCollider->AddImpulse(hozImpulse);
 }
 
 
