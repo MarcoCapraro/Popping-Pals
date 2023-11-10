@@ -38,7 +38,7 @@ void AProjectile::BeginPlay()
 
 	// Get access to the popPal controlled by the player
 	popPal = Cast<APopPal>(UGameplayStatics::GetPlayerCharacter(this, 0));
-	projectileCollider->OnComponentHit.AddDynamic(this, &AProjectile::OnHit);	
+	projectileCollider->OnComponentBeginOverlap.AddDynamic(this, &AProjectile::OnOverlapBegin);
 }
 
 // Called every frame
@@ -48,23 +48,11 @@ void AProjectile::Tick(float DeltaTime)
 
 }
 
-void AProjectile::OnHit(UPrimitiveComponent* hitComp, AActor* otherActor, UPrimitiveComponent* otherComp, FVector normalImpulse, const FHitResult& hitResult)
+void AProjectile::OnOverlapBegin(UPrimitiveComponent* overlappedComponent, AActor* otherActor, UPrimitiveComponent* otherComp, int32 otherBodyIndex, bool bFromSweep, const FHitResult& sweepResult)
 {
-	// Get the actor that shot the projectile (player)
-	AActor* myOwner = GetOwner();
-	if(myOwner == nullptr) {
-		Destroy();
-		return;
-	}
-
-	// Get the instigator to apply damage to the enemy on hit
-	// AController* myOwnerInstigator = myOwner->GetInstigatorController();
-	// UClass* damageTypeClass = UDamageType::StaticClass();
-
 	// Make sure not to damage ourselves (the projectile)
 	// Make sure not to damage the owner (the player)
-	if(otherActor && otherActor != this && otherActor != myOwner) {
-
+	if(otherActor && otherActor != this) {
 		// Handle Popping (Destruction) of Ball Enemies
 		if(otherActor->IsA(ABaseEnemy::StaticClass())) {
 			UE_LOG(LogTemp, Warning, TEXT("Other Actor is a BaseEnemy!!"));

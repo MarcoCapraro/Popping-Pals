@@ -94,6 +94,4 @@ void APopPal::Fire()
 	// // auto keywords implicitly finds the type that needs to be assigned from the expression
 	AProjectile* projectile = GetWorld()->SpawnActor<AProjectile>(projectileClass, spawnLoc, spawnRot);
 	projectileCount++;
-	// // This will allow us down the line to get the instance of the owner that "owns" that projectile
-	projectile->SetOwner(this);
 }
