@@ -16,7 +16,7 @@ void AEnemyT2::HandleDestruction()
 
     // Spawn EnemyT2
     if(enemyClass != nullptr) {
-        SplitBallEnemy(enemyClass);
+        SplitBallEnemy(enemyClass, 1);
         Destroy();
     }
 

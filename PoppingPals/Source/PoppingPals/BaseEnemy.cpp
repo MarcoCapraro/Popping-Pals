@@ -89,9 +89,8 @@ void ABaseEnemy::OnHit(UPrimitiveComponent* hitComp, AActor* otherActor, UPrimit
 	}
 }
 
-void ABaseEnemy::SplitBallEnemy(TSubclassOf<ABaseEnemy> classRef)
+void ABaseEnemy::SplitBallEnemy(TSubclassOf<ABaseEnemy> classRef, float lastVelocityZ)
 {
-	float currVelocityZ = ballCollider->GetComponentVelocity().Z;
 	FVector spawnLoc = this->GetActorLocation();
 	FRotator spawnRot = this->GetActorRotation();
 
@@ -107,7 +106,7 @@ void ABaseEnemy::SplitBallEnemy(TSubclassOf<ABaseEnemy> classRef)
 	FVector hozImpulse = (this->forwardImpulse * this->GetActorForwardVector() * eLeftCollider->GetMass());
 
 	// If the ball is ascending apply a small upward impulse
-	if(currVelocityZ > 0) {
+	if(lastVelocityZ > 0) {
 		vertImpulse = (this->upwardImpulse * this->GetActorUpVector() * eLeftCollider->GetMass());
 	}
 
