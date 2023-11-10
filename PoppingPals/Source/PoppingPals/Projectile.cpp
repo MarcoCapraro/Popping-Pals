@@ -3,6 +3,11 @@
 
 #include "Projectile.h"
 #include "PopPal.h"
+#include "BaseEnemy.h"
+#include "EnemyT4.h"
+#include "EnemyT3.h"
+#include "EnemyT2.h"
+#include "EnemyT1.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/StaticMeshComponent.h"
 #include "GameFramework/ProjectileMovementComponent.h"
@@ -53,12 +58,31 @@ void AProjectile::OnHit(UPrimitiveComponent* hitComp, AActor* otherActor, UPrimi
 	}
 
 	// Get the instigator to apply damage to the enemy on hit
-	AController* myOwnerInstigator = myOwner->GetInstigatorController();
-	UClass* damageTypeClass = UDamageType::StaticClass();
+	// AController* myOwnerInstigator = myOwner->GetInstigatorController();
+	// UClass* damageTypeClass = UDamageType::StaticClass();
 
 	// Make sure not to damage ourselves (the projectile)
 	// Make sure not to damage the owner (the player)
 	if(otherActor && otherActor != this && otherActor != myOwner) {
+
+		// Handle Popping (Destruction) of Ball Enemies
+		if(otherActor->IsA(ABaseEnemy::StaticClass())) {
+			UE_LOG(LogTemp, Warning, TEXT("Other Actor is a BaseEnemy!!"));
+			if(otherActor->IsA(AEnemyT4::StaticClass())) {
+				AEnemyT4* enemy = Cast<AEnemyT4>(otherActor);
+				enemy->HandleDestruction();
+			} else if (otherActor->IsA(AEnemyT3::StaticClass())) {
+				AEnemyT3* enemy = Cast<AEnemyT3>(otherActor);
+				enemy->HandleDestruction();
+			} else if (otherActor->IsA(AEnemyT2::StaticClass())) {
+				AEnemyT2* enemy = Cast<AEnemyT2>(otherActor);
+				enemy->HandleDestruction();
+			} else {
+				AEnemyT1* enemy = Cast<AEnemyT1>(otherActor);
+				enemy->HandleDestruction();
+			}
+		}
+
 		// UGameplayStatics::ApplyDamage(otherActor, damage, myOwnerInstigator, this, damageTypeClass);
 		// if(hitParticles){
 		// 	UGameplayStatics::SpawnEmitterAtLocation(this, hitParticles, GetActorLocation(), GetActorRotation());	

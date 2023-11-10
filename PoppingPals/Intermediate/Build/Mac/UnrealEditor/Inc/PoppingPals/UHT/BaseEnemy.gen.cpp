@@ -20,6 +20,7 @@ void EmptyLinkFunctionForGeneratedCodeBaseEnemy() {}
 	POPPINGPALS_API UClass* Z_Construct_UClass_ABaseEnemy();
 	POPPINGPALS_API UClass* Z_Construct_UClass_ABaseEnemy_NoRegister();
 	POPPINGPALS_API UEnum* Z_Construct_UEnum_PoppingPals_EBounceHeight();
+	POPPINGPALS_API UEnum* Z_Construct_UEnum_PoppingPals_EEnemyTier();
 	POPPINGPALS_API UEnum* Z_Construct_UEnum_PoppingPals_EStartDirection();
 	UPackage* Z_Construct_UPackage__Script_PoppingPals();
 // End Cross Module References
@@ -101,7 +102,8 @@ void EmptyLinkFunctionForGeneratedCodeBaseEnemy() {}
 	};
 	const UECodeGen_Private::FEnumeratorParam Z_Construct_UEnum_PoppingPals_EBounceHeight_Statics::Enumerators[] = {
 		{ "EBounceHeight::HIGH", (int64)EBounceHeight::HIGH },
-		{ "EBounceHeight::MID", (int64)EBounceHeight::MID },
+		{ "EBounceHeight::MIDHIGH", (int64)EBounceHeight::MIDHIGH },
+		{ "EBounceHeight::MIDLOW", (int64)EBounceHeight::MIDLOW },
 		{ "EBounceHeight::LOW", (int64)EBounceHeight::LOW },
 	};
 #if WITH_METADATA
@@ -111,8 +113,10 @@ void EmptyLinkFunctionForGeneratedCodeBaseEnemy() {}
 		{ "HIGH.Name", "EBounceHeight::HIGH" },
 		{ "LOW.DisplayName", "LOW" },
 		{ "LOW.Name", "EBounceHeight::LOW" },
-		{ "MID.DisplayName", "MID" },
-		{ "MID.Name", "EBounceHeight::MID" },
+		{ "MIDHIGH.DisplayName", "MIDHIGH" },
+		{ "MIDHIGH.Name", "EBounceHeight::MIDHIGH" },
+		{ "MIDLOW.DisplayName", "MIDLOW" },
+		{ "MIDLOW.Name", "EBounceHeight::MIDLOW" },
 		{ "ModuleRelativePath", "BaseEnemy.h" },
 	};
 #endif
@@ -135,6 +139,67 @@ void EmptyLinkFunctionForGeneratedCodeBaseEnemy() {}
 			UECodeGen_Private::ConstructUEnum(Z_Registration_Info_UEnum_EBounceHeight.InnerSingleton, Z_Construct_UEnum_PoppingPals_EBounceHeight_Statics::EnumParams);
 		}
 		return Z_Registration_Info_UEnum_EBounceHeight.InnerSingleton;
+	}
+	static FEnumRegistrationInfo Z_Registration_Info_UEnum_EEnemyTier;
+	static UEnum* EEnemyTier_StaticEnum()
+	{
+		if (!Z_Registration_Info_UEnum_EEnemyTier.OuterSingleton)
+		{
+			Z_Registration_Info_UEnum_EEnemyTier.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_PoppingPals_EEnemyTier, (UObject*)Z_Construct_UPackage__Script_PoppingPals(), TEXT("EEnemyTier"));
+		}
+		return Z_Registration_Info_UEnum_EEnemyTier.OuterSingleton;
+	}
+	template<> POPPINGPALS_API UEnum* StaticEnum<EEnemyTier>()
+	{
+		return EEnemyTier_StaticEnum();
+	}
+	struct Z_Construct_UEnum_PoppingPals_EEnemyTier_Statics
+	{
+		static const UECodeGen_Private::FEnumeratorParam Enumerators[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FEnumParams EnumParams;
+	};
+	const UECodeGen_Private::FEnumeratorParam Z_Construct_UEnum_PoppingPals_EEnemyTier_Statics::Enumerators[] = {
+		{ "EEnemyTier::FOUR", (int64)EEnemyTier::FOUR },
+		{ "EEnemyTier::THREE", (int64)EEnemyTier::THREE },
+		{ "EEnemyTier::TWO", (int64)EEnemyTier::TWO },
+		{ "EEnemyTier::ONE", (int64)EEnemyTier::ONE },
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UEnum_PoppingPals_EEnemyTier_Statics::Enum_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "FOUR.DisplayName", "FOUR" },
+		{ "FOUR.Name", "EEnemyTier::FOUR" },
+		{ "ModuleRelativePath", "BaseEnemy.h" },
+		{ "ONE.DisplayName", "ONE" },
+		{ "ONE.Name", "EEnemyTier::ONE" },
+		{ "THREE.DisplayName", "THREE" },
+		{ "THREE.Name", "EEnemyTier::THREE" },
+		{ "TWO.DisplayName", "TWO" },
+		{ "TWO.Name", "EEnemyTier::TWO" },
+	};
+#endif
+	const UECodeGen_Private::FEnumParams Z_Construct_UEnum_PoppingPals_EEnemyTier_Statics::EnumParams = {
+		(UObject*(*)())Z_Construct_UPackage__Script_PoppingPals,
+		nullptr,
+		"EEnemyTier",
+		"EEnemyTier",
+		Z_Construct_UEnum_PoppingPals_EEnemyTier_Statics::Enumerators,
+		UE_ARRAY_COUNT(Z_Construct_UEnum_PoppingPals_EEnemyTier_Statics::Enumerators),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EEnumFlags::None,
+		(uint8)UEnum::ECppForm::EnumClass,
+		METADATA_PARAMS(Z_Construct_UEnum_PoppingPals_EEnemyTier_Statics::Enum_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UEnum_PoppingPals_EEnemyTier_Statics::Enum_MetaDataParams))
+	};
+	UEnum* Z_Construct_UEnum_PoppingPals_EEnemyTier()
+	{
+		if (!Z_Registration_Info_UEnum_EEnemyTier.InnerSingleton)
+		{
+			UECodeGen_Private::ConstructUEnum(Z_Registration_Info_UEnum_EEnemyTier.InnerSingleton, Z_Construct_UEnum_PoppingPals_EEnemyTier_Statics::EnumParams);
+		}
+		return Z_Registration_Info_UEnum_EEnemyTier.InnerSingleton;
 	}
 	DEFINE_FUNCTION(ABaseEnemy::execOnHit)
 	{
@@ -250,10 +315,6 @@ void EmptyLinkFunctionForGeneratedCodeBaseEnemy() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_ballMesh_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_ballMesh;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_forwardImpulse_MetaData[];
-#endif
-		static const UECodeGen_Private::FFloatPropertyParams NewProp_forwardImpulse;
 		static const UECodeGen_Private::FUnsizedIntPropertyParams NewProp_startDir_Underlying;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_startDir_MetaData[];
@@ -264,6 +325,19 @@ void EmptyLinkFunctionForGeneratedCodeBaseEnemy() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_bounceHeight_MetaData[];
 #endif
 		static const UECodeGen_Private::FEnumPropertyParams NewProp_bounceHeight;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_forwardImpulse_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_forwardImpulse;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_upwardImpulse_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_upwardImpulse;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_bAllowStartImpulse_MetaData[];
+#endif
+		static void NewProp_bAllowStartImpulse_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_bAllowStartImpulse;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -288,7 +362,7 @@ void EmptyLinkFunctionForGeneratedCodeBaseEnemy() {}
 		{ "ModuleRelativePath", "BaseEnemy.h" },
 	};
 #endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABaseEnemy_Statics::NewProp_ballCollider = { "ballCollider", nullptr, (EPropertyFlags)0x00400000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(ABaseEnemy, ballCollider), Z_Construct_UClass_UCapsuleComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABaseEnemy_Statics::NewProp_ballCollider_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseEnemy_Statics::NewProp_ballCollider_MetaData)) };
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABaseEnemy_Statics::NewProp_ballCollider = { "ballCollider", nullptr, (EPropertyFlags)0x00200800000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(ABaseEnemy, ballCollider), Z_Construct_UClass_UCapsuleComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABaseEnemy_Statics::NewProp_ballCollider_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseEnemy_Statics::NewProp_ballCollider_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseEnemy_Statics::NewProp_ballMesh_MetaData[] = {
 		{ "Category", "Component" },
@@ -296,14 +370,7 @@ void EmptyLinkFunctionForGeneratedCodeBaseEnemy() {}
 		{ "ModuleRelativePath", "BaseEnemy.h" },
 	};
 #endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABaseEnemy_Statics::NewProp_ballMesh = { "ballMesh", nullptr, (EPropertyFlags)0x00400000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(ABaseEnemy, ballMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABaseEnemy_Statics::NewProp_ballMesh_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseEnemy_Statics::NewProp_ballMesh_MetaData)) };
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseEnemy_Statics::NewProp_forwardImpulse_MetaData[] = {
-		{ "Category", "Movement" },
-		{ "ModuleRelativePath", "BaseEnemy.h" },
-	};
-#endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABaseEnemy_Statics::NewProp_forwardImpulse = { "forwardImpulse", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(ABaseEnemy, forwardImpulse), METADATA_PARAMS(Z_Construct_UClass_ABaseEnemy_Statics::NewProp_forwardImpulse_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseEnemy_Statics::NewProp_forwardImpulse_MetaData)) };
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABaseEnemy_Statics::NewProp_ballMesh = { "ballMesh", nullptr, (EPropertyFlags)0x00200800000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(ABaseEnemy, ballMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABaseEnemy_Statics::NewProp_ballMesh_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseEnemy_Statics::NewProp_ballMesh_MetaData)) };
 	const UECodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_ABaseEnemy_Statics::NewProp_startDir_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 0, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseEnemy_Statics::NewProp_startDir_MetaData[] = {
@@ -311,7 +378,7 @@ void EmptyLinkFunctionForGeneratedCodeBaseEnemy() {}
 		{ "ModuleRelativePath", "BaseEnemy.h" },
 	};
 #endif
-	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ABaseEnemy_Statics::NewProp_startDir = { "startDir", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(ABaseEnemy, startDir), Z_Construct_UEnum_PoppingPals_EStartDirection, METADATA_PARAMS(Z_Construct_UClass_ABaseEnemy_Statics::NewProp_startDir_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseEnemy_Statics::NewProp_startDir_MetaData)) }; // 3203482481
+	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ABaseEnemy_Statics::NewProp_startDir = { "startDir", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(ABaseEnemy, startDir), Z_Construct_UEnum_PoppingPals_EStartDirection, METADATA_PARAMS(Z_Construct_UClass_ABaseEnemy_Statics::NewProp_startDir_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseEnemy_Statics::NewProp_startDir_MetaData)) }; // 3203482481
 	const UECodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_ABaseEnemy_Statics::NewProp_bounceHeight_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 0, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseEnemy_Statics::NewProp_bounceHeight_MetaData[] = {
@@ -319,15 +386,42 @@ void EmptyLinkFunctionForGeneratedCodeBaseEnemy() {}
 		{ "ModuleRelativePath", "BaseEnemy.h" },
 	};
 #endif
-	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ABaseEnemy_Statics::NewProp_bounceHeight = { "bounceHeight", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(ABaseEnemy, bounceHeight), Z_Construct_UEnum_PoppingPals_EBounceHeight, METADATA_PARAMS(Z_Construct_UClass_ABaseEnemy_Statics::NewProp_bounceHeight_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseEnemy_Statics::NewProp_bounceHeight_MetaData)) }; // 3414144746
+	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ABaseEnemy_Statics::NewProp_bounceHeight = { "bounceHeight", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(ABaseEnemy, bounceHeight), Z_Construct_UEnum_PoppingPals_EBounceHeight, METADATA_PARAMS(Z_Construct_UClass_ABaseEnemy_Statics::NewProp_bounceHeight_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseEnemy_Statics::NewProp_bounceHeight_MetaData)) }; // 2674862244
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseEnemy_Statics::NewProp_forwardImpulse_MetaData[] = {
+		{ "Category", "Movement" },
+		{ "ModuleRelativePath", "BaseEnemy.h" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABaseEnemy_Statics::NewProp_forwardImpulse = { "forwardImpulse", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(ABaseEnemy, forwardImpulse), METADATA_PARAMS(Z_Construct_UClass_ABaseEnemy_Statics::NewProp_forwardImpulse_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseEnemy_Statics::NewProp_forwardImpulse_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseEnemy_Statics::NewProp_upwardImpulse_MetaData[] = {
+		{ "Category", "Movement" },
+		{ "ModuleRelativePath", "BaseEnemy.h" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABaseEnemy_Statics::NewProp_upwardImpulse = { "upwardImpulse", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(ABaseEnemy, upwardImpulse), METADATA_PARAMS(Z_Construct_UClass_ABaseEnemy_Statics::NewProp_upwardImpulse_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseEnemy_Statics::NewProp_upwardImpulse_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseEnemy_Statics::NewProp_bAllowStartImpulse_MetaData[] = {
+		{ "Category", "Movement" },
+		{ "ModuleRelativePath", "BaseEnemy.h" },
+	};
+#endif
+	void Z_Construct_UClass_ABaseEnemy_Statics::NewProp_bAllowStartImpulse_SetBit(void* Obj)
+	{
+		((ABaseEnemy*)Obj)->bAllowStartImpulse = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ABaseEnemy_Statics::NewProp_bAllowStartImpulse = { "bAllowStartImpulse", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, sizeof(bool), sizeof(ABaseEnemy), &Z_Construct_UClass_ABaseEnemy_Statics::NewProp_bAllowStartImpulse_SetBit, METADATA_PARAMS(Z_Construct_UClass_ABaseEnemy_Statics::NewProp_bAllowStartImpulse_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseEnemy_Statics::NewProp_bAllowStartImpulse_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABaseEnemy_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseEnemy_Statics::NewProp_ballCollider,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseEnemy_Statics::NewProp_ballMesh,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseEnemy_Statics::NewProp_forwardImpulse,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseEnemy_Statics::NewProp_startDir_Underlying,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseEnemy_Statics::NewProp_startDir,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseEnemy_Statics::NewProp_bounceHeight_Underlying,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseEnemy_Statics::NewProp_bounceHeight,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseEnemy_Statics::NewProp_forwardImpulse,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseEnemy_Statics::NewProp_upwardImpulse,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseEnemy_Statics::NewProp_bAllowStartImpulse,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ABaseEnemy_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ABaseEnemy>::IsAbstract,
@@ -368,12 +462,13 @@ void EmptyLinkFunctionForGeneratedCodeBaseEnemy() {}
 	};
 	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_Statics::EnumInfo[] = {
 		{ EStartDirection_StaticEnum, TEXT("EStartDirection"), &Z_Registration_Info_UEnum_EStartDirection, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3203482481U) },
-		{ EBounceHeight_StaticEnum, TEXT("EBounceHeight"), &Z_Registration_Info_UEnum_EBounceHeight, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3414144746U) },
+		{ EBounceHeight_StaticEnum, TEXT("EBounceHeight"), &Z_Registration_Info_UEnum_EBounceHeight, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2674862244U) },
+		{ EEnemyTier_StaticEnum, TEXT("EEnemyTier"), &Z_Registration_Info_UEnum_EEnemyTier, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2312209135U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ABaseEnemy, ABaseEnemy::StaticClass, TEXT("ABaseEnemy"), &Z_Registration_Info_UClass_ABaseEnemy, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABaseEnemy), 2300350480U) },
+		{ Z_Construct_UClass_ABaseEnemy, ABaseEnemy::StaticClass, TEXT("ABaseEnemy"), &Z_Registration_Info_UClass_ABaseEnemy, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABaseEnemy), 1198806603U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_2757538025(TEXT("/Script/PoppingPals"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_1558932646(TEXT("/Script/PoppingPals"),
 		Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_BaseEnemy_h_Statics::EnumInfo));
