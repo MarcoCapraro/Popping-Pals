@@ -3810,4 +3810,64 @@
   Runtime/CoreOnline/Public/Online/CoreOnline.h \
   Runtime/Engine/Classes/GameFramework/PlayerController.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/GameModeBase.generated.h \
-  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Intermediate/Build/Mac/UnrealEditor/Inc/PoppingPals/UHT/PoppingPalsGameModeBase.generated.h
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Intermediate/Build/Mac/UnrealEditor/Inc/PoppingPals/UHT/PoppingPalsGameModeBase.generated.h \
+  Runtime/Engine/Classes/Kismet/GameplayStatics.h \
+  Runtime/CoreUObject/Public/UObject/Object.h \
+  Runtime/Engine/Classes/Engine/EngineTypes.h \
+  Runtime/CoreUObject/Public/UObject/Interface.h \
+  Runtime/Engine/Public/CollisionQueryParams.h \
+  Runtime/Engine/Classes/Engine/LatentActionManager.h \
+  Runtime/Engine/Classes/Kismet/BlueprintFunctionLibrary.h \
+  Runtime/Engine/Classes/Kismet/KismetSystemLibrary.h \
+  Runtime/Engine/Classes/Engine/HitResult.h \
+  Runtime/CoreUObject/Public/UObject/UnrealType.h \
+  Runtime/CoreUObject/Public/UObject/TextProperty.h \
+  Runtime/CoreUObject/Public/UObject/SoftObjectPtr.h \
+  Runtime/CoreUObject/Public/UObject/PropertyAccessUtil.h \
+  Runtime/Core/Public/Containers/UnrealString.h \
+  Runtime/Core/Public/CoreGlobals.h Runtime/Core/Public/HAL/Platform.h \
+  Runtime/Core/Public/Misc/EnumClassFlags.h \
+  Runtime/Core/Public/Templates/Function.h \
+  Runtime/Core/Public/Templates/UniquePtr.h \
+  Runtime/Core/Public/UObject/NameTypes.h \
+  Runtime/CoreUObject/Public/UObject/TopLevelAssetPath.h \
+  Runtime/Engine/Classes/Engine/CollisionProfile.h \
+  Runtime/CoreUObject/Public/AssetRegistry/ARFilter.h \
+  Runtime/CoreUObject/Public/UObject/Class.h \
+  Runtime/CoreUObject/Public/UObject/SoftObjectPath.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/KismetSystemLibrary.generated.h \
+  Runtime/Engine/Classes/Sound/DialogueTypes.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/DialogueTypes.generated.h \
+  /Users/Shared/Epic\ Games/UE_5.2/Engine/Source/Runtime/Engine/Classes/Kismet/GameplayStaticsTypes.h \
+  /Users/Shared/Epic\ Games/UE_5.2/Engine/Source/Runtime/Engine/Classes/Kismet/KismetSystemLibrary.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/GameplayStaticsTypes.generated.h \
+  Runtime/Engine/Classes/Particles/WorldPSCPool.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/GameplayStatics.generated.h \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Source/PoppingPals/PopPal.h \
+  Runtime/Engine/Classes/GameFramework/Character.h \
+  Runtime/CoreUObject/Public/UObject/UObjectGlobals.h \
+  Runtime/CoreUObject/Public/UObject/CoreNet.h \
+  Runtime/Engine/Classes/Engine/NetSerialization.h \
+  Runtime/Engine/Classes/Components/ActorComponent.h \
+  Runtime/Engine/Classes/GameFramework/CharacterMovementReplication.h \
+  Runtime/Core/Public/Serialization/BitWriter.h \
+  Runtime/Core/Public/Containers/BitArray.h \
+  Runtime/Experimental/Iris/Core/Public/Iris/Serialization/IrisObjectReferencePackageMap.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/IrisCore/UHT/IrisObjectReferencePackageMap.generated.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/CharacterMovementReplication.generated.h \
+  Runtime/Engine/Classes/Animation/AnimationAsset.h \
+  Runtime/Engine/Classes/GameFramework/RootMotionSource.h \
+  Runtime/Core/Public/HAL/IConsoleManager.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/RootMotionSource.generated.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/Character.generated.h \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Intermediate/Build/Mac/UnrealEditor/Inc/PoppingPals/UHT/PopPal.generated.h \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Source/PoppingPals/BaseEnemy.h \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Intermediate/Build/Mac/UnrealEditor/Inc/PoppingPals/UHT/BaseEnemy.generated.h \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Source/PoppingPals/EnemyT4.h \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Intermediate/Build/Mac/UnrealEditor/Inc/PoppingPals/UHT/EnemyT4.generated.h \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Source/PoppingPals/EnemyT3.h \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Intermediate/Build/Mac/UnrealEditor/Inc/PoppingPals/UHT/EnemyT3.generated.h \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Source/PoppingPals/EnemyT2.h \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Intermediate/Build/Mac/UnrealEditor/Inc/PoppingPals/UHT/EnemyT2.generated.h \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Source/PoppingPals/EnemyT1.h \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Intermediate/Build/Mac/UnrealEditor/Inc/PoppingPals/UHT/EnemyT1.generated.h
