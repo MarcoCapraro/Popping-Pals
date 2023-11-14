@@ -65,6 +65,9 @@ protected:
 	UPROPERTY(EditAnywhere, Category="Movement")
 	bool bAllowStartImpulse = false;
 
+	UPROPERTY(EditAnywhere, Category="Combat")
+	float damage = 33.0f;
+
 	// Using a bp class reference taken from the child classes spawn a new ball
 	void SplitBallEnemy(TSubclassOf<ABaseEnemy> classRef, float lastVelocityZ);
 
@@ -72,9 +75,15 @@ protected:
 	void ApplyStartImpulse(UCapsuleComponent* enemyCollider, FVector vertImpulse, FVector hozImpulse);
 
 private:
+	class APopPal* popPal;
+
 	// Use UFUNCTION to define a method that can be bound to a delegate or a timer
 	UFUNCTION()
 	void OnHit(UPrimitiveComponent* hitComp, AActor* otherActor, UPrimitiveComponent* otherComp, FVector normalImpulse, const FHitResult& hitResult);
+
+	UFUNCTION()
+	void OnOverlapBegin(UPrimitiveComponent* overlappedComponent, AActor* otherActor, 
+	UPrimitiveComponent* otherComp, int32 otherBodyIndex, bool bFromSweep, const FHitResult& sweepResult);
 
 public:	
 	// Called every frame

@@ -14,8 +14,52 @@ void EmptyLinkFunctionForGeneratedCodePoppingPalsGameModeBase() {}
 	POPPINGPALS_API UClass* Z_Construct_UClass_APoppingPalsGameModeBase_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_PoppingPals();
 // End Cross Module References
+	struct PoppingPalsGameModeBase_eventGameOver_Parms
+	{
+		bool bWonGame;
+	};
+	static FName NAME_APoppingPalsGameModeBase_GameOver = FName(TEXT("GameOver"));
+	void APoppingPalsGameModeBase::GameOver(bool bWonGame)
+	{
+		PoppingPalsGameModeBase_eventGameOver_Parms Parms;
+		Parms.bWonGame=bWonGame ? true : false;
+		ProcessEvent(FindFunctionChecked(NAME_APoppingPalsGameModeBase_GameOver),&Parms);
+	}
 	void APoppingPalsGameModeBase::StaticRegisterNativesAPoppingPalsGameModeBase()
 	{
+	}
+	struct Z_Construct_UFunction_APoppingPalsGameModeBase_GameOver_Statics
+	{
+		static void NewProp_bWonGame_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_bWonGame;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_APoppingPalsGameModeBase_GameOver_Statics::NewProp_bWonGame_SetBit(void* Obj)
+	{
+		((PoppingPalsGameModeBase_eventGameOver_Parms*)Obj)->bWonGame = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_APoppingPalsGameModeBase_GameOver_Statics::NewProp_bWonGame = { "bWonGame", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, sizeof(bool), sizeof(PoppingPalsGameModeBase_eventGameOver_Parms), &Z_Construct_UFunction_APoppingPalsGameModeBase_GameOver_Statics::NewProp_bWonGame_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_APoppingPalsGameModeBase_GameOver_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APoppingPalsGameModeBase_GameOver_Statics::NewProp_bWonGame,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APoppingPalsGameModeBase_GameOver_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "PoppingPalsGameModeBase.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APoppingPalsGameModeBase_GameOver_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APoppingPalsGameModeBase, nullptr, "GameOver", nullptr, nullptr, sizeof(PoppingPalsGameModeBase_eventGameOver_Parms), Z_Construct_UFunction_APoppingPalsGameModeBase_GameOver_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APoppingPalsGameModeBase_GameOver_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08080800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_APoppingPalsGameModeBase_GameOver_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_APoppingPalsGameModeBase_GameOver_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_APoppingPalsGameModeBase_GameOver()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APoppingPalsGameModeBase_GameOver_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(APoppingPalsGameModeBase);
 	UClass* Z_Construct_UClass_APoppingPalsGameModeBase_NoRegister()
@@ -25,6 +69,7 @@ void EmptyLinkFunctionForGeneratedCodePoppingPalsGameModeBase() {}
 	struct Z_Construct_UClass_APoppingPalsGameModeBase_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -34,6 +79,9 @@ void EmptyLinkFunctionForGeneratedCodePoppingPalsGameModeBase() {}
 	UObject* (*const Z_Construct_UClass_APoppingPalsGameModeBase_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_AGameModeBase,
 		(UObject* (*)())Z_Construct_UPackage__Script_PoppingPals,
+	};
+	const FClassFunctionLinkInfo Z_Construct_UClass_APoppingPalsGameModeBase_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_APoppingPalsGameModeBase_GameOver, "GameOver" }, // 2918952816
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APoppingPalsGameModeBase_Statics::Class_MetaDataParams[] = {
@@ -52,11 +100,11 @@ void EmptyLinkFunctionForGeneratedCodePoppingPalsGameModeBase() {}
 		"Game",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		nullptr,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		0,
 		0,
 		0x009002ACu,
@@ -82,9 +130,9 @@ void EmptyLinkFunctionForGeneratedCodePoppingPalsGameModeBase() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_PoppingPalsGameModeBase_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_APoppingPalsGameModeBase, APoppingPalsGameModeBase::StaticClass, TEXT("APoppingPalsGameModeBase"), &Z_Registration_Info_UClass_APoppingPalsGameModeBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APoppingPalsGameModeBase), 775333123U) },
+		{ Z_Construct_UClass_APoppingPalsGameModeBase, APoppingPalsGameModeBase::StaticClass, TEXT("APoppingPalsGameModeBase"), &Z_Registration_Info_UClass_APoppingPalsGameModeBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APoppingPalsGameModeBase), 2860961770U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_PoppingPalsGameModeBase_h_3985361029(TEXT("/Script/PoppingPals"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_PoppingPalsGameModeBase_h_3944026870(TEXT("/Script/PoppingPals"),
 		Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_PoppingPalsGameModeBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_PoppingPalsGameModeBase_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

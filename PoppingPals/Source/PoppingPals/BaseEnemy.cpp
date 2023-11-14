@@ -6,6 +6,8 @@
 #include "Components/StaticMeshComponent.h"
 #include "GameFramework/Actor.h"
 #include "GameFramework/ProjectileMovementComponent.h"
+#include "PopPal.h"
+#include "Kismet/GameplayStatics.h"
 
 
 // Sets default values
@@ -50,6 +52,9 @@ void ABaseEnemy::BeginPlay()
 
 	// Setup Interaction with Floor (Add Predetermined Impulse to Return to same height every time)
 	ballCollider->OnComponentHit.AddDynamic(this, &ABaseEnemy::OnHit);	
+	ballCollider->OnComponentBeginOverlap.AddDynamic(this, &ABaseEnemy::OnOverlapBegin);
+	popPal = Cast<APopPal>(UGameplayStatics::GetPlayerCharacter(this, 0));
+
 	
 }
 
@@ -86,6 +91,21 @@ void ABaseEnemy::OnHit(UPrimitiveComponent* hitComp, AActor* otherActor, UPrimit
 
         // Set the new velocity
         ballCollider->SetPhysicsLinearVelocity(newVelocity);
+	}
+}
+
+void ABaseEnemy::OnOverlapBegin(UPrimitiveComponent* overlappedComponent, AActor* otherActor, 
+UPrimitiveComponent* otherComp, int32 otherBodyIndex, bool bFromSweep, const FHitResult& sweepResult)
+{
+
+	UClass* damageTypeClass = UDamageType::StaticClass();
+
+	// Make sure otherActor exists and that it isn't itself
+	if(otherActor && otherActor != this) {
+		// If the overlap occurs with the player character, apply damage to their health component
+		if(otherActor == popPal) {
+			UGameplayStatics::ApplyDamage(otherActor, damage, nullptr, this, damageTypeClass);
+		}
 	}
 }
 

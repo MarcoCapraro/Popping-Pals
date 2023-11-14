@@ -96,9 +96,9 @@ void EmptyLinkFunctionForGeneratedCodeEnemyT2() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_EnemyT2_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AEnemyT2, AEnemyT2::StaticClass, TEXT("AEnemyT2"), &Z_Registration_Info_UClass_AEnemyT2, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AEnemyT2), 1269890035U) },
+		{ Z_Construct_UClass_AEnemyT2, AEnemyT2::StaticClass, TEXT("AEnemyT2"), &Z_Registration_Info_UClass_AEnemyT2, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AEnemyT2), 66995187U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_EnemyT2_h_2841406478(TEXT("/Script/PoppingPals"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_EnemyT2_h_2807823872(TEXT("/Script/PoppingPals"),
 		Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_EnemyT2_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_Source_PoppingPals_EnemyT2_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

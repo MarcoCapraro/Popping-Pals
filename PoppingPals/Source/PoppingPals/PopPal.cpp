@@ -34,6 +34,17 @@ APopPal::APopPal()
 
 }
 
+void APopPal::HandleDestruction()
+{
+	SetActorHiddenInGame(true);
+	SetActorTickEnabled(false);
+
+	// Disable player input
+	APlayerController* popPalController = GetWorld()->GetFirstPlayerController();
+	this->DisableInput(popPalController);
+
+}
+
 // Called when the game starts or when spawned
 void APopPal::BeginPlay()
 {
