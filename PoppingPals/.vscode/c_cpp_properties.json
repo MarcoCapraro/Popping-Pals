@@ -13,8 +13,7 @@
             "cStandard": "c17",
             "cppStandard": "c++17",
             "intelliSenseMode": "clang-x64",
-            "configurationProvider": "epic.ue",
-            "compileCommands": "/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/.vscode/compileCommands_PoppingPals.json"
+            "compileCommands": "/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/.vscode/compileCommands_PoppingPals.json"
         },
         {
             "name": "Mac",
@@ -27,10 +26,9 @@
                 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks"
             ],
             "cStandard": "c17",
-            "cppStandard": "c++17",
+            "cppStandard": "c++20",
             "intelliSenseMode": "clang-x64",
-            "configurationProvider": "epic.ue",
-            "compileCommands": "/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/.vscode/compileCommands_Default.json"
+            "compileCommands": "/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/.vscode/compileCommands_Default.json"
         }
     ],
     "version": 4

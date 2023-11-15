@@ -117,21 +117,23 @@ void ABaseEnemy::SplitBallEnemy(TSubclassOf<ABaseEnemy> classRef, float lastVelo
 	ABaseEnemy* enemySpawnLeft = GetWorld()->SpawnActor<ABaseEnemy>(classRef, spawnLoc, spawnRot);
 	ABaseEnemy* enemySpawnRight = GetWorld()->SpawnActor<ABaseEnemy>(classRef, spawnLoc, spawnRot);
 
-	// Get enemy colliders
-	UCapsuleComponent* eLeftCollider = enemySpawnLeft->GetComponentByClass<UCapsuleComponent>();
-	UCapsuleComponent* eRightCollider = enemySpawnRight->GetComponentByClass<UCapsuleComponent>();
+	if(enemySpawnLeft && enemySpawnRight) {
+		// Get enemy colliders
+		UCapsuleComponent* eLeftCollider = enemySpawnLeft->GetComponentByClass<UCapsuleComponent>();
+		UCapsuleComponent* eRightCollider = enemySpawnRight->GetComponentByClass<UCapsuleComponent>();
 
-	// Add the starting Vertical and Horizontal Impulse
-	FVector vertImpulse = FVector::ZeroVector;
-	FVector hozImpulse = (this->forwardImpulse * this->GetActorForwardVector() * eLeftCollider->GetMass());
+		// Calculate starting vertical and horizontal impulse
+		FVector vertImpulse = FVector::ZeroVector;
+		FVector hozImpulse = (this->forwardImpulse * this->GetActorForwardVector() * eLeftCollider->GetMass());
 
-	// If the ball is ascending apply a small upward impulse
-	if(lastVelocityZ > 0) {
-		vertImpulse = (this->upwardImpulse * this->GetActorUpVector() * eLeftCollider->GetMass());
+		// If the ball is ascending apply a small upward impulse
+		if(lastVelocityZ > 0) {
+			vertImpulse = (this->upwardImpulse * this->GetActorUpVector() * eLeftCollider->GetMass());
+		}
+
+		ApplyStartImpulse(eLeftCollider, vertImpulse, hozImpulse);
+		ApplyStartImpulse(eRightCollider, vertImpulse, -hozImpulse);
 	}
-
-	ApplyStartImpulse(eLeftCollider, vertImpulse, hozImpulse);
-	ApplyStartImpulse(eRightCollider, vertImpulse, -hozImpulse);
 }
 
 void ABaseEnemy::ApplyStartImpulse(UCapsuleComponent* enemyCollider, FVector vertImpulse, FVector hozImpulse)
