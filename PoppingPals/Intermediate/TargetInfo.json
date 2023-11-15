@@ -2,12 +2,12 @@
 	"Targets": [
 		{
 			"Name": "PoppingPals",
-			"Path": "/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Source/PoppingPals.Target.cs",
+			"Path": "../Source/PoppingPals.Target.cs",
 			"Type": "Game"
 		},
 		{
 			"Name": "PoppingPalsEditor",
-			"Path": "/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals/Source/PoppingPalsEditor.Target.cs",
+			"Path": "../Source/PoppingPalsEditor.Target.cs",
 			"Type": "Editor"
 		}
 	]

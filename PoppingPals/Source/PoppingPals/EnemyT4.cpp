@@ -16,7 +16,8 @@ void AEnemyT4::HandleDestruction()
 
     // Spawn EnemyT3
     if(enemyClass != nullptr) {
-        SplitBallEnemy(enemyClass, 1);
+        float currVelocityZ = this->ballCollider->GetComponentVelocity().Z;
+        SplitBallEnemy(enemyClass, currVelocityZ);
         Destroy();
     }
 
