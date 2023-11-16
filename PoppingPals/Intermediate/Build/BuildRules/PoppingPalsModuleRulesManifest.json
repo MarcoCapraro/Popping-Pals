@@ -1,8 +1,0 @@
-{
-	"SourceFiles": [
-		"/Users/gianlucacapraro/Documents/GitHub/Popping-Pals/PoppingPals/Source/PoppingPals/PoppingPals.Build.cs",
-		"/Users/gianlucacapraro/Documents/GitHub/Popping-Pals/PoppingPals/Source/PoppingPals.Target.cs",
-		"/Users/gianlucacapraro/Documents/GitHub/Popping-Pals/PoppingPals/Source/PoppingPalsEditor.Target.cs"
-	],
-	"EngineVersion": "5.3.2"
-}
