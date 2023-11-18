@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "InputActionValue.h"
 #include "PopPal.generated.h"
 
 UCLASS()
@@ -35,10 +36,21 @@ private:
 	UPROPERTY(EditAnywhere, Category="Movement")
 	float jumpForce = 100.0f;
 
-	void MoveForward(float value);
+	UPROPERTY(EditAnywhere, Category = Input)
+	class UInputMappingContext*  popPalContext;
+
+	UPROPERTY(EditAnywhere, Category = Input)
+	class UInputAction* moveRightAction;
+
+	UPROPERTY(EditAnywhere, Category = Input)
+	class UInputAction* jumpAction;
+
+	UPROPERTY(EditAnywhere, Category = Input)
+	class UInputAction* fireAction;
+
+	void MoveRight(const FInputActionValue& value);
 	void Jump();
 	void Fire();
-	void CheckFireCondition();
 
 public:	
 	// Used as a Firing Condition

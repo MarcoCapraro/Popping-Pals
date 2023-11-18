@@ -4065,6 +4065,9 @@
   Runtime/CoreUObject/Public/UObject/Class.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/RootMotionSource.generated.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/Character.generated.h \
+  ../Plugins/EnhancedInput/Source/EnhancedInput/Public/InputActionValue.h \
+  Runtime/InputCore/Classes/InputCoreTypes.h \
+  ../Plugins/EnhancedInput/Intermediate/Build/Mac/UnrealEditor/Inc/EnhancedInput/UHT/InputActionValue.generated.h \
   /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Intermediate/Build/Mac/UnrealEditor/Inc/PoppingPals/UHT/PopPal.generated.h \
   Runtime/Engine/Classes/Components/CapsuleComponent.h \
   Runtime/Engine/Classes/Components/ShapeComponent.h \
@@ -4075,16 +4078,37 @@
   Runtime/Engine/Classes/GameFramework/SpringArmComponent.h \
   Runtime/Engine/Classes/Components/SceneComponent.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/SpringArmComponent.generated.h \
-  Runtime/Engine/Classes/Camera/CameraComponent.h \
-  Runtime/CoreUObject/Public/UObject/ScriptInterface.h \
-  Runtime/Engine/Classes/Engine/BlendableInterface.h \
-  Runtime/Engine/Classes/Engine/Scene.h \
-  Runtime/Engine/Classes/Camera/CameraTypes.h \
-  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/CameraComponent.generated.h \
-  Runtime/Engine/Classes/Components/InputComponent.h \
-  Runtime/Engine/Classes/Kismet/GameplayStatics.h \
+  Runtime/Engine/Classes/GameFramework/CharacterMovementComponent.h \
+  Runtime/Core/Public/Math/RandomStream.h \
+  Runtime/Engine/Classes/Engine/EngineBaseTypes.h \
+  Runtime/Engine/Public/WorldCollision.h \
+  Runtime/Engine/Classes/AI/Navigation/NavigationTypes.h \
+  Runtime/Engine/Classes/Animation/AnimMontage.h \
+  Runtime/Engine/Classes/AI/Navigation/NavigationAvoidanceTypes.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/NavigationAvoidanceTypes.generated.h \
+  Runtime/Engine/Public/AI/RVOAvoidanceInterface.h \
   Runtime/CoreUObject/Public/UObject/Interface.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/RVOAvoidanceInterface.generated.h \
+  Runtime/Engine/Classes/GameFramework/PawnMovementComponent.h \
+  Runtime/Engine/Classes/GameFramework/NavMovementComponent.h \
+  Runtime/Engine/Classes/AI/Navigation/NavAgentInterface.h \
+  Runtime/Engine/Classes/AI/Navigation/PathFollowingAgentInterface.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/PathFollowingAgentInterface.generated.h \
+  Runtime/Engine/Classes/GameFramework/MovementComponent.h \
+  Runtime/PhysicsCore/Public/Chaos/ChaosEngineInterface.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/MovementComponent.generated.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/NavMovementComponent.generated.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/PawnMovementComponent.generated.h \
+  Runtime/Engine/Classes/Interfaces/NetworkPredictionInterface.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/NetworkPredictionInterface.generated.h \
+  Runtime/Engine/Public/CharacterMovementComponentAsync.h \
+  Runtime/Experimental/Chaos/Public/Chaos/SimCallbackObject.h \
   Runtime/Engine/Public/CollisionQueryParams.h \
+  Runtime/PhysicsCore/Public/CollisionShape.h \
+  Runtime/Engine/Public/Engine/OverlapInfo.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/CharacterMovementComponentAsync.generated.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/CharacterMovementComponent.generated.h \
+  Runtime/Engine/Classes/Kismet/GameplayStatics.h \
   Runtime/Engine/Classes/Engine/LatentActionManager.h \
   Runtime/Engine/Classes/GameFramework/PlayerController.h \
   Runtime/Engine/Classes/Kismet/BlueprintFunctionLibrary.h \
@@ -4114,37 +4138,39 @@
   ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/GameplayStatics.generated.h \
   Runtime/Engine/Classes/Kismet/KismetMathLibrary.h \
   Runtime/CoreUObject/Public/UObject/Script.h \
-  Runtime/Core/Public/Math/RandomStream.h \
   Runtime/CoreUObject/Public/UObject/Stack.h \
   Runtime/Core/Public/Misc/QualifiedFrameTime.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/KismetMathLibrary.generated.h \
   /Users/Shared/Epic\ Games/UE_5.3/Engine/Source/Runtime/Engine/Classes/Kismet/KismetMathLibrary.inl \
-  Runtime/Engine/Classes/GameFramework/CharacterMovementComponent.h \
-  Runtime/Engine/Classes/Engine/EngineBaseTypes.h \
-  Runtime/Engine/Public/WorldCollision.h \
-  Runtime/Engine/Classes/AI/Navigation/NavigationTypes.h \
-  Runtime/Engine/Classes/Animation/AnimMontage.h \
-  Runtime/Engine/Classes/AI/Navigation/NavigationAvoidanceTypes.h \
-  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/NavigationAvoidanceTypes.generated.h \
-  Runtime/Engine/Public/AI/RVOAvoidanceInterface.h \
-  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/RVOAvoidanceInterface.generated.h \
-  Runtime/Engine/Classes/GameFramework/PawnMovementComponent.h \
-  Runtime/Engine/Classes/GameFramework/NavMovementComponent.h \
-  Runtime/Engine/Classes/AI/Navigation/NavAgentInterface.h \
-  Runtime/Engine/Classes/AI/Navigation/PathFollowingAgentInterface.h \
-  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/PathFollowingAgentInterface.generated.h \
-  Runtime/Engine/Classes/GameFramework/MovementComponent.h \
-  Runtime/PhysicsCore/Public/Chaos/ChaosEngineInterface.h \
-  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/MovementComponent.generated.h \
-  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/NavMovementComponent.generated.h \
-  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/PawnMovementComponent.generated.h \
-  Runtime/Engine/Classes/Interfaces/NetworkPredictionInterface.h \
-  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/NetworkPredictionInterface.generated.h \
-  Runtime/Engine/Public/CharacterMovementComponentAsync.h \
-  Runtime/Experimental/Chaos/Public/Chaos/SimCallbackObject.h \
-  Runtime/PhysicsCore/Public/CollisionShape.h \
-  Runtime/Engine/Public/Engine/OverlapInfo.h \
-  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/CharacterMovementComponentAsync.generated.h \
-  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/CharacterMovementComponent.generated.h \
   /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Source/PoppingPals/Projectile.h \
-  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Intermediate/Build/Mac/UnrealEditor/Inc/PoppingPals/UHT/Projectile.generated.h
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Intermediate/Build/Mac/UnrealEditor/Inc/PoppingPals/UHT/Projectile.generated.h \
+  Runtime/Engine/Classes/Components/InputComponent.h \
+  ../Plugins/EnhancedInput/Source/EnhancedInput/Public/EnhancedInputComponent.h \
+  ../Plugins/EnhancedInput/Source/EnhancedInput/Public/InputAction.h \
+  Runtime/Engine/Classes/Engine/DataAsset.h \
+  ../Plugins/EnhancedInput/Source/EnhancedInput/Public/InputModifiers.h \
+  ../Plugins/EnhancedInput/Intermediate/Build/Mac/UnrealEditor/Inc/EnhancedInput/UHT/InputModifiers.generated.h \
+  ../Plugins/EnhancedInput/Source/EnhancedInput/Public/InputTriggers.h \
+  ../Plugins/EnhancedInput/Intermediate/Build/Mac/UnrealEditor/Inc/EnhancedInput/UHT/InputTriggers.generated.h \
+  ../Plugins/EnhancedInput/Intermediate/Build/Mac/UnrealEditor/Inc/EnhancedInput/UHT/InputAction.generated.h \
+  ../Plugins/EnhancedInput/Source/EnhancedInput/Public/InputMappingQuery.h \
+  ../Plugins/EnhancedInput/Intermediate/Build/Mac/UnrealEditor/Inc/EnhancedInput/UHT/InputMappingQuery.generated.h \
+  ../Plugins/EnhancedInput/Intermediate/Build/Mac/UnrealEditor/Inc/EnhancedInput/UHT/EnhancedInputComponent.generated.h \
+  ../Plugins/EnhancedInput/Source/EnhancedInput/Public/EnhancedInputSubsystems.h \
+  ../Plugins/EnhancedInput/Source/EnhancedInput/Public/EnhancedInputSubsystemInterface.h \
+  ../Plugins/EnhancedInput/Source/EnhancedInput/Public/EnhancedPlayerInput.h \
+  Runtime/Engine/Classes/GameFramework/PlayerInput.h \
+  ../Plugins/EnhancedInput/Intermediate/Build/Mac/UnrealEditor/Inc/EnhancedInput/UHT/EnhancedPlayerInput.generated.h \
+  ../Plugins/EnhancedInput/Source/EnhancedInput/Public/EnhancedActionKeyMapping.h \
+  ../Plugins/EnhancedInput/Intermediate/Build/Mac/UnrealEditor/Inc/EnhancedInput/UHT/EnhancedActionKeyMapping.generated.h \
+  ../Plugins/EnhancedInput/Source/EnhancedInput/Public/PlayerMappableKeySlot.h \
+  ../Plugins/EnhancedInput/Intermediate/Build/Mac/UnrealEditor/Inc/EnhancedInput/UHT/PlayerMappableKeySlot.generated.h \
+  ../Plugins/EnhancedInput/Intermediate/Build/Mac/UnrealEditor/Inc/EnhancedInput/UHT/EnhancedInputSubsystemInterface.generated.h \
+  Runtime/Engine/Public/Subsystems/LocalPlayerSubsystem.h \
+  Runtime/Engine/Public/Subsystems/WorldSubsystem.h \
+  ../Plugins/EnhancedInput/Intermediate/Build/Mac/UnrealEditor/Inc/EnhancedInput/UHT/EnhancedInputSubsystems.generated.h \
+  ../Plugins/EnhancedInput/Source/EnhancedInput/Public/EnhancedInputWorldProcessor.h \
+  Runtime/Slate/Public/Framework/Application/IInputProcessor.h \
+  Runtime/ApplicationCore/Public/GenericPlatform/ICursor.h \
+  Runtime/Core/Public/Math/Vector2D.h \
+  Runtime/Engine/Public/Subsystems/EngineSubsystem.h
