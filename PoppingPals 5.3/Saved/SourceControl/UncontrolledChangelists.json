@@ -20,6 +20,13 @@
 				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Content/Assets/RobotPal/Screen.uasset",
 				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Content/Assets/RobotPal/Silver.uasset",
 				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Content/Assets/RobotPal/White_Metal.uasset",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Content/Blueprints/Actors/BP_BaseProjectile.uasset",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Content/Maps/TestMap.umap",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Content/Assets/Meshes/Environment/Window.uasset",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Content/Blueprints/Actors/BP_Window.uasset",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Content/Assets/Materials/Eyes.uasset",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Content/Blueprints/GameMode/BP_PoppingPalsGameModeBase.uasset",
+				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Content/Assets/Meshes/Environment/FixedWindow.uasset",
 				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Content/Blueprints/Input/Actions/IA_Move.uasset",
 				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Content/Blueprints/Input/Actions/IA_MoveForward.uasset"
 			]

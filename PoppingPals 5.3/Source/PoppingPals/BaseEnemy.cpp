@@ -71,6 +71,8 @@ void ABaseEnemy::OnHit(UPrimitiveComponent* hitComp, AActor* otherActor, UPrimit
         FVector currentVelocity = ballCollider->GetComponentVelocity();
 		FVector newVelocity = FVector(currentVelocity.X, currentVelocity.Y, 0.0f);
 
+		// Check if hitting floor or wall (floor add z velocity, wall do nothing)
+
 		switch(bounceHeight) {
 			case EBounceHeight::HIGH:
 				newVelocity.Z = 1200.0f;
