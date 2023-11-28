@@ -85,7 +85,8 @@ void APopPal::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 void APopPal::Fire()
 {
 	if(projectileCount < 1) {
-		DrawDebugSphere(GetWorld(), projectileSpawnComp->GetComponentLocation(), 10.0f, 15, FColor::Red, false, 3.0f);
+		// The line below causes a bug that affects the aspect ratio constraint
+		// DrawDebugSphere(GetWorld(), projectileSpawnComp->GetComponentLocation(), 10.0f, 15, FColor::Red, false, 3.0f);
 		FVector spawnLoc = projectileSpawnComp->GetComponentLocation();
 		FRotator spawnRot = projectileSpawnComp->GetComponentRotation();
 
