@@ -67,30 +67,34 @@ void ABaseEnemy::Tick(float DeltaTime)
 void ABaseEnemy::OnHit(UPrimitiveComponent* hitComp, AActor* otherActor, UPrimitiveComponent* otherComp, FVector normalImpulse, const FHitResult& hitResult)
 {
 	if(otherActor->ActorHasTag("LevelFloor")) {
-		// Calculate the new velocity for bouncing
-        FVector currentVelocity = ballCollider->GetComponentVelocity();
-		FVector newVelocity = FVector(currentVelocity.X, currentVelocity.Y, 0.0f);
 
-		switch(bounceHeight) {
-			case EBounceHeight::HIGH:
-				newVelocity.Z = 1200.0f;
-				break;
-			case EBounceHeight::MIDHIGH:
-				newVelocity.Z = 1000.0f;
-				break;
-			case EBounceHeight::MIDLOW:
-				newVelocity.Z = 1000.0f;
-				break;
-			case EBounceHeight::LOW:
-				newVelocity.Z = 800.0f;
-				break;
-			default:
-				break;
+		UE_LOG(LogTemp, Warning, TEXT("ImpactNormal: %s"), *hitResult.ImpactNormal.ToString());
+		// Only adjust velocity if ball hitting floor (floor hit if ImpactNormal.Z > 0)
+		if(hitResult.ImpactNormal.Z > 0.5f) {
+			// Calculate the new velocity for bouncing
+			FVector currentVelocity = ballCollider->GetComponentVelocity();
+			FVector newVelocity = FVector(currentVelocity.X, currentVelocity.Y, 0.0f);
+
+			switch(bounceHeight) {
+				case EBounceHeight::HIGH:
+					newVelocity.Z = 1200.0f;
+					break;
+				case EBounceHeight::MIDHIGH:
+					newVelocity.Z = 1000.0f;
+					break;
+				case EBounceHeight::MIDLOW:
+					newVelocity.Z = 1000.0f;
+					break;
+				case EBounceHeight::LOW:
+					newVelocity.Z = 800.0f;
+					break;
+				default:
+					break;
+			}
+
+			// Set the new velocity
+			ballCollider->SetPhysicsLinearVelocity(newVelocity);
 		}
-
-
-        // Set the new velocity
-        ballCollider->SetPhysicsLinearVelocity(newVelocity);
 	}
 }
 
