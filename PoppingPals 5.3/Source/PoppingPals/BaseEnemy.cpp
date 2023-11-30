@@ -39,7 +39,7 @@ ABaseEnemy::ABaseEnemy()
 void ABaseEnemy::HandleDestruction()
 {
 	// Setup death particles, sound, and potential camera shake here
-	// Setup the spawning of the next tier of balls (if not Tier 1)
+	// Hide the ball from the player's view, and prevent collisions
 }
 
 // Called when the game starts or when spawned
@@ -68,7 +68,7 @@ void ABaseEnemy::OnHit(UPrimitiveComponent* hitComp, AActor* otherActor, UPrimit
 {
 	if(otherActor->ActorHasTag("LevelFloor")) {
 
-		UE_LOG(LogTemp, Warning, TEXT("ImpactNormal: %s"), *hitResult.ImpactNormal.ToString());
+		// UE_LOG(LogTemp, Warning, TEXT("ImpactNormal: %s"), *hitResult.ImpactNormal.ToString());
 		// Only adjust velocity if ball hitting floor (floor hit if ImpactNormal.Z > 0)
 		if(hitResult.ImpactNormal.Z > 0.5f) {
 			// Calculate the new velocity for bouncing
@@ -131,7 +131,7 @@ void ABaseEnemy::SplitBallEnemy(TSubclassOf<ABaseEnemy> classRef, float lastVelo
 		FVector hozImpulse = (this->forwardImpulse * this->GetActorForwardVector() * eLeftCollider->GetMass());
 
 		// If the ball is ascending apply a small upward impulse
-		if(lastVelocityZ > 0) {
+		if(lastVelocityZ >= -400.0f) {
 			vertImpulse = (this->upwardImpulse * this->GetActorUpVector() * eLeftCollider->GetMass());
 		}
 

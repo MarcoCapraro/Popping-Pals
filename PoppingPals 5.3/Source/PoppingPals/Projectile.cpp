@@ -34,7 +34,7 @@ void AProjectile::BeginPlay()
 
 	// Get access to the popPal controlled by the player
 	popPal = Cast<APopPal>(UGameplayStatics::GetPlayerCharacter(this, 0));
-	projectileCollider->OnComponentBeginOverlap.AddDynamic(this, &AProjectile::OnOverlapBegin);
+	projectileCollider->OnComponentHit.AddDynamic(this, &AProjectile::OnHit);
 }
 
 // Called every frame
@@ -44,10 +44,8 @@ void AProjectile::Tick(float DeltaTime)
 
 }
 
-void AProjectile::OnOverlapBegin(UPrimitiveComponent* overlappedComponent, AActor* otherActor, 
-UPrimitiveComponent* otherComp, int32 otherBodyIndex, bool bFromSweep, const FHitResult& sweepResult)
+void AProjectile::OnHit(UPrimitiveComponent* hitComp, AActor* otherActor, UPrimitiveComponent* otherComp, FVector normalImpulse, const FHitResult& hitResult)
 {
-
 	UClass* damageTypeClass = UDamageType::StaticClass();
 
 	// Make sure not to damage ourselves (the projectile)
@@ -73,4 +71,3 @@ UPrimitiveComponent* otherComp, int32 otherBodyIndex, bool bFromSweep, const FHi
 
 	Destroy();
 }
-

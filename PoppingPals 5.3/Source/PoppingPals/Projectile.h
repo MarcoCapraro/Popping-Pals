@@ -36,8 +36,8 @@ private:
 
 	// Use UFUNCTION to define a method that can be bound to a delegate or a timer
 	UFUNCTION()
-	void OnOverlapBegin(UPrimitiveComponent* overlappedComponent, AActor* otherActor, 
-	UPrimitiveComponent* otherComp, int32 otherBodyIndex, bool bFromSweep, const FHitResult& sweepResult);
+	void OnHit(UPrimitiveComponent* hitComp, AActor* otherActor, 
+	UPrimitiveComponent* otherComp, FVector normalImpulse, const FHitResult& hitResult);
 
 public:	
 	// Called every frame
