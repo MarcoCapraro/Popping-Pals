@@ -4037,9 +4037,9 @@
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_types/_nl_item.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__bsd_locale_defaults.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/cstdarg \
-  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Source/PoppingPals/PoppingPalsGameModeBase.cpp \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Source/PoppingPals/GameMode/PoppingPalsGameModeBase.cpp \
   /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Intermediate/Build/Mac/x64/UnrealEditor/Development/PoppingPals/Definitions.PoppingPals.h \
-  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Source/PoppingPals/PoppingPalsGameModeBase.h \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Source/PoppingPals/GameMode/PoppingPalsGameModeBase.h \
   Runtime/Core/Public/CoreMinimal.h \
   Runtime/Engine/Classes/GameFramework/GameModeBase.h \
   Runtime/CoreUObject/Public/UObject/ObjectMacros.h \
@@ -4087,7 +4087,7 @@
   ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/GameplayStaticsTypes.generated.h \
   Runtime/Engine/Classes/Particles/WorldPSCPool.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/GameplayStatics.generated.h \
-  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Source/PoppingPals/PopPal.h \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Source/PoppingPals/Character/PopPal.h \
   Runtime/Engine/Classes/GameFramework/Character.h \
   Runtime/CoreUObject/Public/UObject/UObjectGlobals.h \
   Runtime/CoreUObject/Public/UObject/CoreNet.h \
@@ -4108,13 +4108,13 @@
   Runtime/InputCore/Classes/InputCoreTypes.h \
   ../Plugins/EnhancedInput/Intermediate/Build/Mac/UnrealEditor/Inc/EnhancedInput/UHT/InputActionValue.generated.h \
   /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Intermediate/Build/Mac/UnrealEditor/Inc/PoppingPals/UHT/PopPal.generated.h \
-  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Source/PoppingPals/BaseEnemy.h \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Source/PoppingPals/Enemies/BaseEnemy.h \
   /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Intermediate/Build/Mac/UnrealEditor/Inc/PoppingPals/UHT/BaseEnemy.generated.h \
-  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Source/PoppingPals/EnemyT4.h \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Source/PoppingPals/Enemies/EnemyT4.h \
   /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Intermediate/Build/Mac/UnrealEditor/Inc/PoppingPals/UHT/EnemyT4.generated.h \
-  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Source/PoppingPals/EnemyT3.h \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Source/PoppingPals/Enemies/EnemyT3.h \
   /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Intermediate/Build/Mac/UnrealEditor/Inc/PoppingPals/UHT/EnemyT3.generated.h \
-  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Source/PoppingPals/EnemyT2.h \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Source/PoppingPals/Enemies/EnemyT2.h \
   /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Intermediate/Build/Mac/UnrealEditor/Inc/PoppingPals/UHT/EnemyT2.generated.h \
-  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Source/PoppingPals/EnemyT1.h \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Source/PoppingPals/Enemies/EnemyT1.h \
   /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Intermediate/Build/Mac/UnrealEditor/Inc/PoppingPals/UHT/EnemyT1.generated.h

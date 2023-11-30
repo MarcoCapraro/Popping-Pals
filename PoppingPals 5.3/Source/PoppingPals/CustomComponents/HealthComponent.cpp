@@ -4,7 +4,7 @@
 #include "HealthComponent.h"
 #include "GameFramework/Actor.h"
 #include "Kismet/GameplayStatics.h"
-#include "PoppingPalsGameModeBase.h"
+#include "PoppingPals/GameMode/PoppingPalsGameModeBase.h"
 
 // Sets default values for this component's properties
 UHealthComponent::UHealthComponent()

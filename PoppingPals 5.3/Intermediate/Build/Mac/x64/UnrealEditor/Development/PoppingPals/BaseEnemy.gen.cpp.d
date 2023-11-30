@@ -4040,7 +4040,7 @@
   /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Intermediate/Build/Mac/UnrealEditor/Inc/PoppingPals/UHT/BaseEnemy.gen.cpp \
   /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Intermediate/Build/Mac/x64/UnrealEditor/Development/PoppingPals/Definitions.PoppingPals.h \
   Runtime/CoreUObject/Public/UObject/GeneratedCppIncludes.h \
-  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Source/PoppingPals/BaseEnemy.h \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Source/PoppingPals/Enemies/BaseEnemy.h \
   Runtime/Core/Public/CoreMinimal.h \
   Runtime/Engine/Classes/GameFramework/Actor.h \
   /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Intermediate/Build/Mac/UnrealEditor/Inc/PoppingPals/UHT/BaseEnemy.generated.h \

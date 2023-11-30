@@ -4040,7 +4040,7 @@
   /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Intermediate/Build/Mac/UnrealEditor/Inc/PoppingPals/UHT/PopPal.gen.cpp \
   /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Intermediate/Build/Mac/x64/UnrealEditor/Development/PoppingPals/Definitions.PoppingPals.h \
   Runtime/CoreUObject/Public/UObject/GeneratedCppIncludes.h \
-  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Source/PoppingPals/PopPal.h \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Source/PoppingPals/Character/PopPal.h \
   Runtime/Core/Public/CoreMinimal.h \
   Runtime/Engine/Classes/GameFramework/Character.h \
   Runtime/CoreUObject/Public/UObject/ObjectMacros.h \

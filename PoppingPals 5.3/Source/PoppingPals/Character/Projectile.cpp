@@ -3,7 +3,7 @@
 
 #include "Projectile.h"
 #include "PopPal.h"
-#include "BaseEnemy.h"
+#include "PoppingPals/Enemies/BaseEnemy.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/StaticMeshComponent.h"
 #include "GameFramework/ProjectileMovementComponent.h"

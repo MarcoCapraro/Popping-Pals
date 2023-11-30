@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "PoppingPals/Projectile.h"
+#include "PoppingPals/Character/Projectile.h"
 #include "../../Source/Runtime/Engine/Classes/Engine/HitResult.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeProjectile() {}
@@ -104,7 +104,7 @@ void EmptyLinkFunctionForGeneratedCodeProjectile() {}
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// Use UFUNCTION to define a method that can be bound to a delegate or a timer\n" },
 #endif
-		{ "ModuleRelativePath", "Projectile.h" },
+		{ "ModuleRelativePath", "Character/Projectile.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Use UFUNCTION to define a method that can be bound to a delegate or a timer" },
 #endif
@@ -160,20 +160,20 @@ void EmptyLinkFunctionForGeneratedCodeProjectile() {}
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AProjectile_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_AProjectile_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_AProjectile_OnHit, "OnHit" }, // 1168617019
+		{ &Z_Construct_UFunction_AProjectile_OnHit, "OnHit" }, // 2047952171
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AProjectile_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AProjectile_Statics::Class_MetaDataParams[] = {
-		{ "IncludePath", "Projectile.h" },
-		{ "ModuleRelativePath", "Projectile.h" },
+		{ "IncludePath", "Character/Projectile.h" },
+		{ "ModuleRelativePath", "Character/Projectile.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AProjectile_Statics::NewProp_projectileCollider_MetaData[] = {
 		{ "Category", "Components" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Projectile.h" },
+		{ "ModuleRelativePath", "Character/Projectile.h" },
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AProjectile_Statics::NewProp_projectileCollider = { "projectileCollider", nullptr, (EPropertyFlags)0x00400000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AProjectile, projectileCollider), Z_Construct_UClass_UCapsuleComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AProjectile_Statics::NewProp_projectileCollider_MetaData), Z_Construct_UClass_AProjectile_Statics::NewProp_projectileCollider_MetaData) };
@@ -181,7 +181,7 @@ void EmptyLinkFunctionForGeneratedCodeProjectile() {}
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AProjectile_Statics::NewProp_projectileMesh_MetaData[] = {
 		{ "Category", "Components" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Projectile.h" },
+		{ "ModuleRelativePath", "Character/Projectile.h" },
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AProjectile_Statics::NewProp_projectileMesh = { "projectileMesh", nullptr, (EPropertyFlags)0x0040000000090009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AProjectile, projectileMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AProjectile_Statics::NewProp_projectileMesh_MetaData), Z_Construct_UClass_AProjectile_Statics::NewProp_projectileMesh_MetaData) };
@@ -189,14 +189,14 @@ void EmptyLinkFunctionForGeneratedCodeProjectile() {}
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AProjectile_Statics::NewProp_projectileMovement_MetaData[] = {
 		{ "Category", "Movement" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Projectile.h" },
+		{ "ModuleRelativePath", "Character/Projectile.h" },
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AProjectile_Statics::NewProp_projectileMovement = { "projectileMovement", nullptr, (EPropertyFlags)0x0040000000090009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AProjectile, projectileMovement), Z_Construct_UClass_UProjectileMovementComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AProjectile_Statics::NewProp_projectileMovement_MetaData), Z_Construct_UClass_AProjectile_Statics::NewProp_projectileMovement_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AProjectile_Statics::NewProp_damage_MetaData[] = {
 		{ "Category", "Combat" },
-		{ "ModuleRelativePath", "Projectile.h" },
+		{ "ModuleRelativePath", "Character/Projectile.h" },
 	};
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AProjectile_Statics::NewProp_damage = { "damage", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AProjectile, damage), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AProjectile_Statics::NewProp_damage_MetaData), Z_Construct_UClass_AProjectile_Statics::NewProp_damage_MetaData) };
@@ -239,15 +239,15 @@ void EmptyLinkFunctionForGeneratedCodeProjectile() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AProjectile);
 	AProjectile::~AProjectile() {}
-	struct Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_Projectile_h_Statics
+	struct Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_Character_Projectile_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_Projectile_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AProjectile, AProjectile::StaticClass, TEXT("AProjectile"), &Z_Registration_Info_UClass_AProjectile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AProjectile), 4048030928U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_Character_Projectile_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_AProjectile, AProjectile::StaticClass, TEXT("AProjectile"), &Z_Registration_Info_UClass_AProjectile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AProjectile), 4118447430U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_Projectile_h_62168274(TEXT("/Script/PoppingPals"),
-		Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_Projectile_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_Projectile_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_Character_Projectile_h_1291451756(TEXT("/Script/PoppingPals"),
+		Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_Character_Projectile_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_Character_Projectile_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

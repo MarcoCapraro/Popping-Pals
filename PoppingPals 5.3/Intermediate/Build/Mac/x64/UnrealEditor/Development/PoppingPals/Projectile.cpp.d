@@ -4037,15 +4037,15 @@
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_types/_nl_item.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__bsd_locale_defaults.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/cstdarg \
-  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Source/PoppingPals/Projectile.cpp \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Source/PoppingPals/Character/Projectile.cpp \
   /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Intermediate/Build/Mac/x64/UnrealEditor/Development/PoppingPals/Definitions.PoppingPals.h \
-  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Source/PoppingPals/Projectile.h \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Source/PoppingPals/Character/Projectile.h \
   Runtime/Core/Public/CoreMinimal.h \
   Runtime/Engine/Classes/GameFramework/Actor.h \
   /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Intermediate/Build/Mac/UnrealEditor/Inc/PoppingPals/UHT/Projectile.generated.h \
   Runtime/CoreUObject/Public/UObject/ObjectMacros.h \
   Runtime/CoreUObject/Public/UObject/ScriptMacros.h \
-  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Source/PoppingPals/PopPal.h \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Source/PoppingPals/Character/PopPal.h \
   Runtime/Engine/Classes/GameFramework/Character.h \
   Runtime/CoreUObject/Public/UObject/UObjectGlobals.h \
   Runtime/CoreUObject/Public/Templates/SubclassOf.h \
@@ -4071,7 +4071,7 @@
   Runtime/InputCore/Classes/InputCoreTypes.h \
   ../Plugins/EnhancedInput/Intermediate/Build/Mac/UnrealEditor/Inc/EnhancedInput/UHT/InputActionValue.generated.h \
   /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Intermediate/Build/Mac/UnrealEditor/Inc/PoppingPals/UHT/PopPal.generated.h \
-  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Source/PoppingPals/BaseEnemy.h \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Source/PoppingPals/Enemies/BaseEnemy.h \
   /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Intermediate/Build/Mac/UnrealEditor/Inc/PoppingPals/UHT/BaseEnemy.generated.h \
   Runtime/Engine/Classes/Components/CapsuleComponent.h \
   Runtime/Engine/Classes/Components/ShapeComponent.h \
