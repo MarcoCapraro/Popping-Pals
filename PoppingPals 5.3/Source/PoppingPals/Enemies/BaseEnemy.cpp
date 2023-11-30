@@ -6,7 +6,7 @@
 #include "Components/StaticMeshComponent.h"
 #include "GameFramework/Actor.h"
 #include "GameFramework/ProjectileMovementComponent.h"
-#include "PopPal.h"
+#include "PoppingPals/Character/PopPal.h"
 #include "Kismet/GameplayStatics.h"
 
 

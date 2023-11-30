@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "PoppingPals/PopPal.h"
+#include "PoppingPals/Character/PopPal.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodePopPal() {}
 // Cross Module References
@@ -86,15 +86,15 @@ void EmptyLinkFunctionForGeneratedCodePopPal() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APopPal_Statics::Class_MetaDataParams[] = {
 		{ "HideCategories", "Navigation" },
-		{ "IncludePath", "PopPal.h" },
-		{ "ModuleRelativePath", "PopPal.h" },
+		{ "IncludePath", "Character/PopPal.h" },
+		{ "ModuleRelativePath", "Character/PopPal.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APopPal_Statics::NewProp_characterMesh_MetaData[] = {
 		{ "Category", "PopPal" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "PopPal.h" },
+		{ "ModuleRelativePath", "Character/PopPal.h" },
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APopPal_Statics::NewProp_characterMesh = { "characterMesh", nullptr, (EPropertyFlags)0x00400000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APopPal, characterMesh), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APopPal_Statics::NewProp_characterMesh_MetaData), Z_Construct_UClass_APopPal_Statics::NewProp_characterMesh_MetaData) };
@@ -102,56 +102,56 @@ void EmptyLinkFunctionForGeneratedCodePopPal() {}
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APopPal_Statics::NewProp_projectileSpawnComp_MetaData[] = {
 		{ "Category", "PopPal" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "PopPal.h" },
+		{ "ModuleRelativePath", "Character/PopPal.h" },
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APopPal_Statics::NewProp_projectileSpawnComp = { "projectileSpawnComp", nullptr, (EPropertyFlags)0x00400000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APopPal, projectileSpawnComp), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APopPal_Statics::NewProp_projectileSpawnComp_MetaData), Z_Construct_UClass_APopPal_Statics::NewProp_projectileSpawnComp_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APopPal_Statics::NewProp_projectileClass_MetaData[] = {
 		{ "Category", "PopPal" },
-		{ "ModuleRelativePath", "PopPal.h" },
+		{ "ModuleRelativePath", "Character/PopPal.h" },
 	};
 #endif
 	const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_APopPal_Statics::NewProp_projectileClass = { "projectileClass", nullptr, (EPropertyFlags)0x0044000000010001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APopPal, projectileClass), Z_Construct_UClass_UClass, Z_Construct_UClass_AProjectile_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APopPal_Statics::NewProp_projectileClass_MetaData), Z_Construct_UClass_APopPal_Statics::NewProp_projectileClass_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APopPal_Statics::NewProp_moveSpeed_MetaData[] = {
 		{ "Category", "Movement" },
-		{ "ModuleRelativePath", "PopPal.h" },
+		{ "ModuleRelativePath", "Character/PopPal.h" },
 	};
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APopPal_Statics::NewProp_moveSpeed = { "moveSpeed", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APopPal, moveSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APopPal_Statics::NewProp_moveSpeed_MetaData), Z_Construct_UClass_APopPal_Statics::NewProp_moveSpeed_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APopPal_Statics::NewProp_jumpForce_MetaData[] = {
 		{ "Category", "Movement" },
-		{ "ModuleRelativePath", "PopPal.h" },
+		{ "ModuleRelativePath", "Character/PopPal.h" },
 	};
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APopPal_Statics::NewProp_jumpForce = { "jumpForce", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APopPal, jumpForce), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APopPal_Statics::NewProp_jumpForce_MetaData), Z_Construct_UClass_APopPal_Statics::NewProp_jumpForce_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APopPal_Statics::NewProp_popPalContext_MetaData[] = {
 		{ "Category", "Input" },
-		{ "ModuleRelativePath", "PopPal.h" },
+		{ "ModuleRelativePath", "Character/PopPal.h" },
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APopPal_Statics::NewProp_popPalContext = { "popPalContext", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APopPal, popPalContext), Z_Construct_UClass_UInputMappingContext_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APopPal_Statics::NewProp_popPalContext_MetaData), Z_Construct_UClass_APopPal_Statics::NewProp_popPalContext_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APopPal_Statics::NewProp_moveRightAction_MetaData[] = {
 		{ "Category", "Input" },
-		{ "ModuleRelativePath", "PopPal.h" },
+		{ "ModuleRelativePath", "Character/PopPal.h" },
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APopPal_Statics::NewProp_moveRightAction = { "moveRightAction", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APopPal, moveRightAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APopPal_Statics::NewProp_moveRightAction_MetaData), Z_Construct_UClass_APopPal_Statics::NewProp_moveRightAction_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APopPal_Statics::NewProp_jumpAction_MetaData[] = {
 		{ "Category", "Input" },
-		{ "ModuleRelativePath", "PopPal.h" },
+		{ "ModuleRelativePath", "Character/PopPal.h" },
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APopPal_Statics::NewProp_jumpAction = { "jumpAction", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APopPal, jumpAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APopPal_Statics::NewProp_jumpAction_MetaData), Z_Construct_UClass_APopPal_Statics::NewProp_jumpAction_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APopPal_Statics::NewProp_fireAction_MetaData[] = {
 		{ "Category", "Input" },
-		{ "ModuleRelativePath", "PopPal.h" },
+		{ "ModuleRelativePath", "Character/PopPal.h" },
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APopPal_Statics::NewProp_fireAction = { "fireAction", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APopPal, fireAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APopPal_Statics::NewProp_fireAction_MetaData), Z_Construct_UClass_APopPal_Statics::NewProp_fireAction_MetaData) };
@@ -161,7 +161,7 @@ void EmptyLinkFunctionForGeneratedCodePopPal() {}
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// Used as a Firing Condition\n" },
 #endif
-		{ "ModuleRelativePath", "PopPal.h" },
+		{ "ModuleRelativePath", "Character/PopPal.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Used as a Firing Condition" },
 #endif
@@ -213,15 +213,15 @@ void EmptyLinkFunctionForGeneratedCodePopPal() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(APopPal);
 	APopPal::~APopPal() {}
-	struct Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_PopPal_h_Statics
+	struct Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_Character_PopPal_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_PopPal_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_APopPal, APopPal::StaticClass, TEXT("APopPal"), &Z_Registration_Info_UClass_APopPal, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APopPal), 1785029112U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_Character_PopPal_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_APopPal, APopPal::StaticClass, TEXT("APopPal"), &Z_Registration_Info_UClass_APopPal, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APopPal), 1455579974U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_PopPal_h_2263409630(TEXT("/Script/PoppingPals"),
-		Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_PopPal_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_PopPal_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_Character_PopPal_h_4258915716(TEXT("/Script/PoppingPals"),
+		Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_Character_PopPal_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_Character_PopPal_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

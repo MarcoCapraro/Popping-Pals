@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "PoppingPals/BaseEnemy.h"
+#include "PoppingPals/Enemies/BaseEnemy.h"
 #include "../../Source/Runtime/Engine/Classes/Engine/HitResult.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeBaseEnemy() {}
@@ -54,7 +54,7 @@ void EmptyLinkFunctionForGeneratedCodeBaseEnemy() {}
 		{ "BlueprintType", "true" },
 		{ "LEFT.DisplayName", "LEFT" },
 		{ "LEFT.Name", "EStartDirection::LEFT" },
-		{ "ModuleRelativePath", "BaseEnemy.h" },
+		{ "ModuleRelativePath", "Enemies/BaseEnemy.h" },
 		{ "RIGHT.DisplayName", "RIGHT" },
 		{ "RIGHT.Name", "EStartDirection::RIGHT" },
 	};
@@ -117,7 +117,7 @@ void EmptyLinkFunctionForGeneratedCodeBaseEnemy() {}
 		{ "MIDHIGH.Name", "EBounceHeight::MIDHIGH" },
 		{ "MIDLOW.DisplayName", "MIDLOW" },
 		{ "MIDLOW.Name", "EBounceHeight::MIDLOW" },
-		{ "ModuleRelativePath", "BaseEnemy.h" },
+		{ "ModuleRelativePath", "Enemies/BaseEnemy.h" },
 	};
 #endif
 	const UECodeGen_Private::FEnumParams Z_Construct_UEnum_PoppingPals_EBounceHeight_Statics::EnumParams = {
@@ -172,7 +172,7 @@ void EmptyLinkFunctionForGeneratedCodeBaseEnemy() {}
 		{ "BlueprintType", "true" },
 		{ "FOUR.DisplayName", "FOUR" },
 		{ "FOUR.Name", "EEnemyTier::FOUR" },
-		{ "ModuleRelativePath", "BaseEnemy.h" },
+		{ "ModuleRelativePath", "Enemies/BaseEnemy.h" },
 		{ "ONE.DisplayName", "ONE" },
 		{ "ONE.Name", "EEnemyTier::ONE" },
 		{ "THREE.DisplayName", "THREE" },
@@ -297,7 +297,7 @@ void EmptyLinkFunctionForGeneratedCodeBaseEnemy() {}
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// Use UFUNCTION to define a method that can be bound to a delegate or a timer\n" },
 #endif
-		{ "ModuleRelativePath", "BaseEnemy.h" },
+		{ "ModuleRelativePath", "Enemies/BaseEnemy.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Use UFUNCTION to define a method that can be bound to a delegate or a timer" },
 #endif
@@ -383,7 +383,7 @@ void EmptyLinkFunctionForGeneratedCodeBaseEnemy() {}
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ABaseEnemy_OnOverlapBegin_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "BaseEnemy.h" },
+		{ "ModuleRelativePath", "Enemies/BaseEnemy.h" },
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABaseEnemy_OnOverlapBegin_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABaseEnemy, nullptr, "OnOverlapBegin", nullptr, nullptr, Z_Construct_UFunction_ABaseEnemy_OnOverlapBegin_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ABaseEnemy_OnOverlapBegin_Statics::PropPointers), sizeof(Z_Construct_UFunction_ABaseEnemy_OnOverlapBegin_Statics::BaseEnemy_eventOnOverlapBegin_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00440401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABaseEnemy_OnOverlapBegin_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABaseEnemy_OnOverlapBegin_Statics::Function_MetaDataParams) };
@@ -455,21 +455,21 @@ void EmptyLinkFunctionForGeneratedCodeBaseEnemy() {}
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABaseEnemy_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_ABaseEnemy_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_ABaseEnemy_OnHit, "OnHit" }, // 1445581794
-		{ &Z_Construct_UFunction_ABaseEnemy_OnOverlapBegin, "OnOverlapBegin" }, // 2201970680
+		{ &Z_Construct_UFunction_ABaseEnemy_OnHit, "OnHit" }, // 1984614905
+		{ &Z_Construct_UFunction_ABaseEnemy_OnOverlapBegin, "OnOverlapBegin" }, // 3019899227
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABaseEnemy_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseEnemy_Statics::Class_MetaDataParams[] = {
-		{ "IncludePath", "BaseEnemy.h" },
-		{ "ModuleRelativePath", "BaseEnemy.h" },
+		{ "IncludePath", "Enemies/BaseEnemy.h" },
+		{ "ModuleRelativePath", "Enemies/BaseEnemy.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseEnemy_Statics::NewProp_ballCollider_MetaData[] = {
 		{ "Category", "Component" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "BaseEnemy.h" },
+		{ "ModuleRelativePath", "Enemies/BaseEnemy.h" },
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABaseEnemy_Statics::NewProp_ballCollider = { "ballCollider", nullptr, (EPropertyFlags)0x00200800000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABaseEnemy, ballCollider), Z_Construct_UClass_UCapsuleComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABaseEnemy_Statics::NewProp_ballCollider_MetaData), Z_Construct_UClass_ABaseEnemy_Statics::NewProp_ballCollider_MetaData) };
@@ -477,7 +477,7 @@ void EmptyLinkFunctionForGeneratedCodeBaseEnemy() {}
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseEnemy_Statics::NewProp_ballMesh_MetaData[] = {
 		{ "Category", "Component" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "BaseEnemy.h" },
+		{ "ModuleRelativePath", "Enemies/BaseEnemy.h" },
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABaseEnemy_Statics::NewProp_ballMesh = { "ballMesh", nullptr, (EPropertyFlags)0x00200800000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABaseEnemy, ballMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABaseEnemy_Statics::NewProp_ballMesh_MetaData), Z_Construct_UClass_ABaseEnemy_Statics::NewProp_ballMesh_MetaData) };
@@ -485,36 +485,36 @@ void EmptyLinkFunctionForGeneratedCodeBaseEnemy() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseEnemy_Statics::NewProp_startDir_MetaData[] = {
 		{ "Category", "Movement" },
-		{ "ModuleRelativePath", "BaseEnemy.h" },
+		{ "ModuleRelativePath", "Enemies/BaseEnemy.h" },
 	};
 #endif
-	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ABaseEnemy_Statics::NewProp_startDir = { "startDir", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABaseEnemy, startDir), Z_Construct_UEnum_PoppingPals_EStartDirection, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABaseEnemy_Statics::NewProp_startDir_MetaData), Z_Construct_UClass_ABaseEnemy_Statics::NewProp_startDir_MetaData) }; // 2113791367
+	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ABaseEnemy_Statics::NewProp_startDir = { "startDir", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABaseEnemy, startDir), Z_Construct_UEnum_PoppingPals_EStartDirection, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABaseEnemy_Statics::NewProp_startDir_MetaData), Z_Construct_UClass_ABaseEnemy_Statics::NewProp_startDir_MetaData) }; // 2084887355
 	const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_ABaseEnemy_Statics::NewProp_bounceHeight_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseEnemy_Statics::NewProp_bounceHeight_MetaData[] = {
 		{ "Category", "Movement" },
-		{ "ModuleRelativePath", "BaseEnemy.h" },
+		{ "ModuleRelativePath", "Enemies/BaseEnemy.h" },
 	};
 #endif
-	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ABaseEnemy_Statics::NewProp_bounceHeight = { "bounceHeight", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABaseEnemy, bounceHeight), Z_Construct_UEnum_PoppingPals_EBounceHeight, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABaseEnemy_Statics::NewProp_bounceHeight_MetaData), Z_Construct_UClass_ABaseEnemy_Statics::NewProp_bounceHeight_MetaData) }; // 462477022
+	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ABaseEnemy_Statics::NewProp_bounceHeight = { "bounceHeight", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABaseEnemy, bounceHeight), Z_Construct_UEnum_PoppingPals_EBounceHeight, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABaseEnemy_Statics::NewProp_bounceHeight_MetaData), Z_Construct_UClass_ABaseEnemy_Statics::NewProp_bounceHeight_MetaData) }; // 3227446406
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseEnemy_Statics::NewProp_forwardImpulse_MetaData[] = {
 		{ "Category", "Movement" },
-		{ "ModuleRelativePath", "BaseEnemy.h" },
+		{ "ModuleRelativePath", "Enemies/BaseEnemy.h" },
 	};
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABaseEnemy_Statics::NewProp_forwardImpulse = { "forwardImpulse", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABaseEnemy, forwardImpulse), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABaseEnemy_Statics::NewProp_forwardImpulse_MetaData), Z_Construct_UClass_ABaseEnemy_Statics::NewProp_forwardImpulse_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseEnemy_Statics::NewProp_upwardImpulse_MetaData[] = {
 		{ "Category", "Movement" },
-		{ "ModuleRelativePath", "BaseEnemy.h" },
+		{ "ModuleRelativePath", "Enemies/BaseEnemy.h" },
 	};
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABaseEnemy_Statics::NewProp_upwardImpulse = { "upwardImpulse", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABaseEnemy, upwardImpulse), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABaseEnemy_Statics::NewProp_upwardImpulse_MetaData), Z_Construct_UClass_ABaseEnemy_Statics::NewProp_upwardImpulse_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseEnemy_Statics::NewProp_bAllowStartImpulse_MetaData[] = {
 		{ "Category", "Movement" },
-		{ "ModuleRelativePath", "BaseEnemy.h" },
+		{ "ModuleRelativePath", "Enemies/BaseEnemy.h" },
 	};
 #endif
 	void Z_Construct_UClass_ABaseEnemy_Statics::NewProp_bAllowStartImpulse_SetBit(void* Obj)
@@ -525,7 +525,7 @@ void EmptyLinkFunctionForGeneratedCodeBaseEnemy() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseEnemy_Statics::NewProp_damage_MetaData[] = {
 		{ "Category", "Combat" },
-		{ "ModuleRelativePath", "BaseEnemy.h" },
+		{ "ModuleRelativePath", "Enemies/BaseEnemy.h" },
 	};
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABaseEnemy_Statics::NewProp_damage = { "damage", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABaseEnemy, damage), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABaseEnemy_Statics::NewProp_damage_MetaData), Z_Construct_UClass_ABaseEnemy_Statics::NewProp_damage_MetaData) };
@@ -574,21 +574,21 @@ void EmptyLinkFunctionForGeneratedCodeBaseEnemy() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ABaseEnemy);
 	ABaseEnemy::~ABaseEnemy() {}
-	struct Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_BaseEnemy_h_Statics
+	struct Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_Enemies_BaseEnemy_h_Statics
 	{
 		static const FEnumRegisterCompiledInInfo EnumInfo[];
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_BaseEnemy_h_Statics::EnumInfo[] = {
-		{ EStartDirection_StaticEnum, TEXT("EStartDirection"), &Z_Registration_Info_UEnum_EStartDirection, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2113791367U) },
-		{ EBounceHeight_StaticEnum, TEXT("EBounceHeight"), &Z_Registration_Info_UEnum_EBounceHeight, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 462477022U) },
-		{ EEnemyTier_StaticEnum, TEXT("EEnemyTier"), &Z_Registration_Info_UEnum_EEnemyTier, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3900243477U) },
+	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_Enemies_BaseEnemy_h_Statics::EnumInfo[] = {
+		{ EStartDirection_StaticEnum, TEXT("EStartDirection"), &Z_Registration_Info_UEnum_EStartDirection, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2084887355U) },
+		{ EBounceHeight_StaticEnum, TEXT("EBounceHeight"), &Z_Registration_Info_UEnum_EBounceHeight, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3227446406U) },
+		{ EEnemyTier_StaticEnum, TEXT("EEnemyTier"), &Z_Registration_Info_UEnum_EEnemyTier, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2565827202U) },
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_BaseEnemy_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ABaseEnemy, ABaseEnemy::StaticClass, TEXT("ABaseEnemy"), &Z_Registration_Info_UClass_ABaseEnemy, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABaseEnemy), 3646150833U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_Enemies_BaseEnemy_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_ABaseEnemy, ABaseEnemy::StaticClass, TEXT("ABaseEnemy"), &Z_Registration_Info_UClass_ABaseEnemy, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABaseEnemy), 3726802859U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_BaseEnemy_h_3879854859(TEXT("/Script/PoppingPals"),
-		Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_BaseEnemy_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_BaseEnemy_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_Enemies_BaseEnemy_h_2151871627(TEXT("/Script/PoppingPals"),
+		Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_Enemies_BaseEnemy_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_Enemies_BaseEnemy_h_Statics::ClassInfo),
 		nullptr, 0,
-		Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_BaseEnemy_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_BaseEnemy_h_Statics::EnumInfo));
+		Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_Enemies_BaseEnemy_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_Enemies_BaseEnemy_h_Statics::EnumInfo));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

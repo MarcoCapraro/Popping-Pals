@@ -1,6 +1,6 @@
 [
     {
-        "file": "/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Source/PoppingPals/BaseEnemy.cpp",
+        "file": "/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Source/PoppingPals/Enemies/BaseEnemy.cpp",
         "arguments": [
             "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
             "@/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/.vscode/compileCommands_Default/PoppingPals.1.rsp"
@@ -8,7 +8,7 @@
         "directory": "/Users/Shared/Epic Games/UE_5.3/Engine/Source"
     },
     {
-        "file": "/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Source/PoppingPals/BaseEnemy.h",
+        "file": "/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Source/PoppingPals/Enemies/BaseEnemy.h",
         "arguments": [
             "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
             "@/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/.vscode/compileCommands_Default/PoppingPals.1.rsp"
@@ -16,7 +16,7 @@
         "directory": "/Users/Shared/Epic Games/UE_5.3/Engine/Source"
     },
     {
-        "file": "/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Source/PoppingPals/EnemyT1.cpp",
+        "file": "/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Source/PoppingPals/Enemies/EnemyT1.cpp",
         "arguments": [
             "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
             "@/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/.vscode/compileCommands_Default/PoppingPals.1.rsp"
@@ -24,7 +24,7 @@
         "directory": "/Users/Shared/Epic Games/UE_5.3/Engine/Source"
     },
     {
-        "file": "/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Source/PoppingPals/EnemyT1.h",
+        "file": "/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Source/PoppingPals/Enemies/EnemyT1.h",
         "arguments": [
             "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
             "@/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/.vscode/compileCommands_Default/PoppingPals.1.rsp"
@@ -32,7 +32,7 @@
         "directory": "/Users/Shared/Epic Games/UE_5.3/Engine/Source"
     },
     {
-        "file": "/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Source/PoppingPals/EnemyT2.cpp",
+        "file": "/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Source/PoppingPals/Enemies/EnemyT2.cpp",
         "arguments": [
             "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
             "@/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/.vscode/compileCommands_Default/PoppingPals.1.rsp"
@@ -40,7 +40,7 @@
         "directory": "/Users/Shared/Epic Games/UE_5.3/Engine/Source"
     },
     {
-        "file": "/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Source/PoppingPals/EnemyT2.h",
+        "file": "/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Source/PoppingPals/Enemies/EnemyT2.h",
         "arguments": [
             "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
             "@/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/.vscode/compileCommands_Default/PoppingPals.1.rsp"
@@ -48,7 +48,7 @@
         "directory": "/Users/Shared/Epic Games/UE_5.3/Engine/Source"
     },
     {
-        "file": "/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Source/PoppingPals/EnemyT3.cpp",
+        "file": "/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Source/PoppingPals/Enemies/EnemyT3.cpp",
         "arguments": [
             "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
             "@/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/.vscode/compileCommands_Default/PoppingPals.1.rsp"
@@ -56,7 +56,7 @@
         "directory": "/Users/Shared/Epic Games/UE_5.3/Engine/Source"
     },
     {
-        "file": "/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Source/PoppingPals/EnemyT3.h",
+        "file": "/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Source/PoppingPals/Enemies/EnemyT3.h",
         "arguments": [
             "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
             "@/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/.vscode/compileCommands_Default/PoppingPals.1.rsp"
@@ -64,7 +64,7 @@
         "directory": "/Users/Shared/Epic Games/UE_5.3/Engine/Source"
     },
     {
-        "file": "/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Source/PoppingPals/EnemyT4.cpp",
+        "file": "/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Source/PoppingPals/Enemies/EnemyT4.cpp",
         "arguments": [
             "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
             "@/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/.vscode/compileCommands_Default/PoppingPals.1.rsp"
@@ -72,7 +72,7 @@
         "directory": "/Users/Shared/Epic Games/UE_5.3/Engine/Source"
     },
     {
-        "file": "/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Source/PoppingPals/EnemyT4.h",
+        "file": "/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Source/PoppingPals/Enemies/EnemyT4.h",
         "arguments": [
             "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
             "@/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/.vscode/compileCommands_Default/PoppingPals.1.rsp"
@@ -166,5 +166,69 @@
             "@/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/.vscode/compileCommands_Default/PoppingPals.1.rsp"
         ],
         "directory": "/Users/Shared/Epic Games/UE_5.3/Engine/Source"
+    },
+    {
+        "file": "/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Source/PoppingPals/CustomComponents/HealthComponent.cpp",
+        "directory": "/Users/Shared/Epic Games/UE_5.3/Engine/Source",
+        "arguments": [
+            "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+            "@/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/.vscode/compileCommands_Default/PoppingPals.1.rsp"
+        ]
+    },
+    {
+        "file": "/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Source/PoppingPals/CustomComponents/HealthComponent.h",
+        "directory": "/Users/Shared/Epic Games/UE_5.3/Engine/Source",
+        "arguments": [
+            "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+            "@/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/.vscode/compileCommands_Default/PoppingPals.1.rsp"
+        ]
+    },
+    {
+        "file": "/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Source/PoppingPals/Character/PopPal.cpp",
+        "directory": "/Users/Shared/Epic Games/UE_5.3/Engine/Source",
+        "arguments": [
+            "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+            "@/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/.vscode/compileCommands_Default/PoppingPals.1.rsp"
+        ]
+    },
+    {
+        "file": "/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Source/PoppingPals/Character/PopPal.h",
+        "directory": "/Users/Shared/Epic Games/UE_5.3/Engine/Source",
+        "arguments": [
+            "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+            "@/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/.vscode/compileCommands_Default/PoppingPals.1.rsp"
+        ]
+    },
+    {
+        "file": "/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Source/PoppingPals/Character/Projectile.cpp",
+        "directory": "/Users/Shared/Epic Games/UE_5.3/Engine/Source",
+        "arguments": [
+            "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+            "@/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/.vscode/compileCommands_Default/PoppingPals.1.rsp"
+        ]
+    },
+    {
+        "file": "/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Source/PoppingPals/Character/Projectile.h",
+        "directory": "/Users/Shared/Epic Games/UE_5.3/Engine/Source",
+        "arguments": [
+            "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+            "@/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/.vscode/compileCommands_Default/PoppingPals.1.rsp"
+        ]
+    },
+    {
+        "file": "/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Source/PoppingPals/GameMode/PoppingPalsGameModeBase.cpp",
+        "directory": "/Users/Shared/Epic Games/UE_5.3/Engine/Source",
+        "arguments": [
+            "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+            "@/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/.vscode/compileCommands_Default/PoppingPals.1.rsp"
+        ]
+    },
+    {
+        "file": "/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Source/PoppingPals/GameMode/PoppingPalsGameModeBase.h",
+        "directory": "/Users/Shared/Epic Games/UE_5.3/Engine/Source",
+        "arguments": [
+            "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+            "@/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/.vscode/compileCommands_Default/PoppingPals.1.rsp"
+        ]
     }
 ]

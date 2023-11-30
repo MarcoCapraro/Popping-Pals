@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "PoppingPals/PoppingPalsGameModeBase.h"
+#include "PoppingPals/GameMode/PoppingPalsGameModeBase.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodePoppingPalsGameModeBase() {}
 // Cross Module References
@@ -48,7 +48,7 @@ void EmptyLinkFunctionForGeneratedCodePoppingPalsGameModeBase() {}
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APoppingPalsGameModeBase_GameOver_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "PoppingPalsGameModeBase.h" },
+		{ "ModuleRelativePath", "GameMode/PoppingPalsGameModeBase.h" },
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APoppingPalsGameModeBase_GameOver_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APoppingPalsGameModeBase, nullptr, "GameOver", nullptr, nullptr, Z_Construct_UFunction_APoppingPalsGameModeBase_GameOver_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APoppingPalsGameModeBase_GameOver_Statics::PropPointers), sizeof(PoppingPalsGameModeBase_eventGameOver_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08080800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APoppingPalsGameModeBase_GameOver_Statics::Function_MetaDataParams), Z_Construct_UFunction_APoppingPalsGameModeBase_GameOver_Statics::Function_MetaDataParams) };
@@ -84,7 +84,7 @@ void EmptyLinkFunctionForGeneratedCodePoppingPalsGameModeBase() {}
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_APoppingPalsGameModeBase_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_APoppingPalsGameModeBase_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_APoppingPalsGameModeBase_GameOver, "GameOver" }, // 3171160684
+		{ &Z_Construct_UFunction_APoppingPalsGameModeBase_GameOver, "GameOver" }, // 2857767755
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_APoppingPalsGameModeBase_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
@@ -93,8 +93,8 @@ void EmptyLinkFunctionForGeneratedCodePoppingPalsGameModeBase() {}
 		{ "Comment", "/**\n * \n */" },
 #endif
 		{ "HideCategories", "Info Rendering MovementReplication Replication Actor Input Movement Collision Rendering HLOD WorldPartition DataLayers Transformation" },
-		{ "IncludePath", "PoppingPalsGameModeBase.h" },
-		{ "ModuleRelativePath", "PoppingPalsGameModeBase.h" },
+		{ "IncludePath", "GameMode/PoppingPalsGameModeBase.h" },
+		{ "ModuleRelativePath", "GameMode/PoppingPalsGameModeBase.h" },
 		{ "ShowCategories", "Input|MouseInput Input|TouchInput" },
 	};
 #endif
@@ -131,15 +131,15 @@ void EmptyLinkFunctionForGeneratedCodePoppingPalsGameModeBase() {}
 	APoppingPalsGameModeBase::APoppingPalsGameModeBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(APoppingPalsGameModeBase);
 	APoppingPalsGameModeBase::~APoppingPalsGameModeBase() {}
-	struct Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_PoppingPalsGameModeBase_h_Statics
+	struct Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_GameMode_PoppingPalsGameModeBase_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_PoppingPalsGameModeBase_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_APoppingPalsGameModeBase, APoppingPalsGameModeBase::StaticClass, TEXT("APoppingPalsGameModeBase"), &Z_Registration_Info_UClass_APoppingPalsGameModeBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APoppingPalsGameModeBase), 3382333797U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_GameMode_PoppingPalsGameModeBase_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_APoppingPalsGameModeBase, APoppingPalsGameModeBase::StaticClass, TEXT("APoppingPalsGameModeBase"), &Z_Registration_Info_UClass_APoppingPalsGameModeBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APoppingPalsGameModeBase), 349024541U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_PoppingPalsGameModeBase_h_2927105455(TEXT("/Script/PoppingPals"),
-		Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_PoppingPalsGameModeBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_PoppingPalsGameModeBase_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_GameMode_PoppingPalsGameModeBase_h_1602237266(TEXT("/Script/PoppingPals"),
+		Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_GameMode_PoppingPalsGameModeBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_marco_capraro_Documents_GitHub_Popping_Pals_PoppingPals_5_3_Source_PoppingPals_GameMode_PoppingPalsGameModeBase_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

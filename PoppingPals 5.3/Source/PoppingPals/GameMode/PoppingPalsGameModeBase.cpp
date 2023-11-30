@@ -3,12 +3,12 @@
 
 #include "PoppingPalsGameModeBase.h"
 #include "Kismet/GameplayStatics.h"
-#include "PopPal.h"
-#include "BaseEnemy.h"
-#include "EnemyT4.h"
-#include "EnemyT3.h"
-#include "EnemyT2.h"
-#include "EnemyT1.h"
+#include "PoppingPals/Character/PopPal.h"
+#include "PoppingPals/Enemies/BaseEnemy.h"
+#include "PoppingPals/Enemies/EnemyT4.h"
+#include "PoppingPals/Enemies/EnemyT3.h"
+#include "PoppingPals/Enemies/EnemyT2.h"
+#include "PoppingPals/Enemies/EnemyT1.h"
 
 void APoppingPalsGameModeBase::BeginPlay()
 {
