@@ -27,19 +27,22 @@ void APoppingPalsGameModeBase::ActorDied(AActor* deadActor)
     } else if(deadActor->IsA(ABaseEnemy::StaticClass())){
         targetBallEnemies--;
         UE_LOG(LogTemp, Warning, TEXT("Enemies Left = %s"), *FString::FromInt(targetBallEnemies));
+        
         if(deadActor->IsA(AEnemyT4::StaticClass())) {
-				AEnemyT4* enemy = Cast<AEnemyT4>(deadActor);
-				enemy->HandleDestruction();
-			} else if (deadActor->IsA(AEnemyT3::StaticClass())) {
-				AEnemyT3* enemy = Cast<AEnemyT3>(deadActor);
-				enemy->HandleDestruction();
-			} else if (deadActor->IsA(AEnemyT2::StaticClass())) {
-				AEnemyT2* enemy = Cast<AEnemyT2>(deadActor);
-				enemy->HandleDestruction();
-			} else {
-				AEnemyT1* enemy = Cast<AEnemyT1>(deadActor);
-				enemy->HandleDestruction();
+            AEnemyT4* enemy = Cast<AEnemyT4>(deadActor);
+            enemy->HandleDestruction();
+        } else if (deadActor->IsA(AEnemyT3::StaticClass())) {
+            AEnemyT3* enemy = Cast<AEnemyT3>(deadActor);
+            enemy->HandleDestruction();
+        } else if (deadActor->IsA(AEnemyT2::StaticClass())) {
+            AEnemyT2* enemy = Cast<AEnemyT2>(deadActor);
+            enemy->HandleDestruction();
+        } else {
+            AEnemyT1* enemy = Cast<AEnemyT1>(deadActor);
+            enemy->HandleDestruction();
         }
+
+
         if(targetBallEnemies == 0) {
             // If player destroys all ball enemies in a level, player wins the game (bool bWonGame = true)
             GameOver(true);
