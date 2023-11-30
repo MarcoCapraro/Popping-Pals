@@ -86,7 +86,7 @@ void APopPal::Fire()
 {
 	if(projectileCount < 1) {
 		// Uncomment line below ONLY when aspect ratio is NOT constrained
-		DrawDebugSphere(GetWorld(), projectileSpawnComp->GetComponentLocation(), 10.0f, 15, FColor::Red, false, 3.0f);
+		// DrawDebugSphere(GetWorld(), projectileSpawnComp->GetComponentLocation(), 10.0f, 15, FColor::Red, false, 3.0f);
 		FVector spawnLoc = projectileSpawnComp->GetComponentLocation();
 		FRotator spawnRot = projectileSpawnComp->GetComponentRotation();
 
