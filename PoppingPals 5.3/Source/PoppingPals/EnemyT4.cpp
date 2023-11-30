@@ -15,7 +15,6 @@ void AEnemyT4::HandleDestruction()
     // Spawn EnemyT3
     if(enemyClass != nullptr) {
         float currVelocityZ = this->ballCollider->GetComponentVelocity().Z;
-        UE_LOG(LogTemp, Warning, TEXT("Z Velocity = %f"), currVelocityZ);
         SplitBallEnemy(enemyClass, currVelocityZ);
         Destroy();
     }

@@ -37,9 +37,13 @@ ABaseEnemy::ABaseEnemy()
 
 // Handles the popping (destruction) of the ball enemy
 void ABaseEnemy::HandleDestruction()
-{
+{	
+	// If the BaseEnemies pitch is a high value and we do not set it back to zero,
+	// the impulse applied to the next two spawned enemies will cause unintended velocities.
+	SetActorRotation(FRotator::ZeroRotator);
+
 	// Setup death particles, sound, and potential camera shake here
-	// Hide the ball from the player's view, and prevent collisions
+
 }
 
 // Called when the game starts or when spawned
@@ -47,8 +51,8 @@ void ABaseEnemy::BeginPlay()
 {
 	Super::BeginPlay();
 
-	// Setup Physics Constraints ()
-	ballCollider->SetConstraintMode(EDOFMode::Type::XZPlane);
+	// Setup Physics Constraints (Following Lines: Lock Location to XZ, Lock Rotation on XYZ)
+	ballCollider->SetConstraintMode(EDOFMode::Type::XZPlane);	
 
 	// Setup Interaction with Floor (Add Predetermined Impulse to Return to same height every time)
 	ballCollider->OnComponentHit.AddDynamic(this, &ABaseEnemy::OnHit);	
@@ -62,6 +66,8 @@ void ABaseEnemy::BeginPlay()
 void ABaseEnemy::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+	UE_LOG(LogTemp, Warning, TEXT("Enemy Rotation: %s"), *this->GetActorRotation().ToString());
 }
 
 void ABaseEnemy::OnHit(UPrimitiveComponent* hitComp, AActor* otherActor, UPrimitiveComponent* otherComp, FVector normalImpulse, const FHitResult& hitResult)
@@ -128,11 +134,11 @@ void ABaseEnemy::SplitBallEnemy(TSubclassOf<ABaseEnemy> classRef, float lastVelo
 
 		// Calculate starting vertical and horizontal impulse
 		FVector vertImpulse = FVector::ZeroVector;
-		FVector hozImpulse = (this->forwardImpulse * this->GetActorForwardVector() * eLeftCollider->GetMass());
+		FVector hozImpulse = (this->GetActorForwardVector() * forwardImpulse * eLeftCollider->GetMass());
 
 		// If the ball is ascending apply a small upward impulse
 		if(lastVelocityZ >= -400.0f) {
-			vertImpulse = (this->upwardImpulse * this->GetActorUpVector() * eLeftCollider->GetMass());
+			vertImpulse = (this->GetActorUpVector() * upwardImpulse * eLeftCollider->GetMass());
 		}
 
 		ApplyStartImpulse(eLeftCollider, vertImpulse, hozImpulse);
@@ -145,5 +151,3 @@ void ABaseEnemy::ApplyStartImpulse(UCapsuleComponent* enemyCollider, FVector ver
     enemyCollider->AddImpulse(vertImpulse);
     enemyCollider->AddImpulse(hozImpulse);
 }
-
-
