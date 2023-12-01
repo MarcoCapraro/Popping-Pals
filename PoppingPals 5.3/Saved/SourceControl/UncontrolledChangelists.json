@@ -5,6 +5,8 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
+				"/Users/gianlucacapraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Content/MainMenu/WB_MainMenuUI.uasset",
+				"/Users/gianlucacapraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Content/Maps/MainMenuMap.umap",
 				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Content/Blueprints/Cameras/BP_FixedCamera.uasset",
 				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Content/Maps/DemoMap.umap",
 				"/Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals 5.3/Content/Blueprints/Character/BP_PopPal.uasset",
