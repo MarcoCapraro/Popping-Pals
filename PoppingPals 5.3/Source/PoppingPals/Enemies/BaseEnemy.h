@@ -22,15 +22,6 @@ enum class EBounceHeight
 	LOW UMETA(DisplayName="LOW")
 };
 
-UENUM(BlueprintType)
-enum class EEnemyTier
-{
-	FOUR UMETA(DisplayName="FOUR"),
-	THREE UMETA(DisplayName="THREE"),
-	TWO UMETA(DisplayName="TWO"),
-	ONE UMETA(DisplayName="ONE")
-};
-
 UCLASS()
 class POPPINGPALS_API ABaseEnemy : public AActor
 {
@@ -67,6 +58,9 @@ protected:
 
 	UPROPERTY(EditAnywhere, Category="Combat")
 	float damage = 33.0f;
+
+	UPROPERTY(EditAnywhere, Category="VFX")
+	class UNiagaraSystem* popParticleEffect;
 
 	// Using a bp class reference taken from the child classes spawn a new ball
 	void SplitBallEnemy(TSubclassOf<ABaseEnemy> classRef, float lastVelocityZ);

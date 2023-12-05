@@ -8,6 +8,8 @@
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "PoppingPals/Character/PopPal.h"
 #include "Kismet/GameplayStatics.h"
+#include "NiagaraFunctionLibrary.h"
+#include "NiagaraComponent.h"
 
 
 // Sets default values
@@ -43,6 +45,9 @@ void ABaseEnemy::HandleDestruction()
 	SetActorRotation(FRotator::ZeroRotator);
 
 	// Setup death particles, sound, and potential camera shake here
+	if(popParticleEffect) {
+		UNiagaraComponent* niagaraComp = UNiagaraFunctionLibrary::SpawnSystemAtLocation(this, popParticleEffect, GetActorLocation(), GetActorRotation());
+	}
 
 }
 
