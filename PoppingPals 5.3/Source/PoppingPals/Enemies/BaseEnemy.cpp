@@ -40,13 +40,11 @@ ABaseEnemy::ABaseEnemy()
 // Handles the popping (destruction) of the ball enemy
 void ABaseEnemy::HandleDestruction()
 {	
-	// If the BaseEnemies pitch is a high value and we do not set it back to zero,
-	// the impulse applied to the next two spawned enemies will cause unintended velocities.
-	SetActorRotation(FRotator::ZeroRotator);
-
 	// Setup death particles, sound, and potential camera shake here
 	if(popParticleEffect) {
 		UNiagaraComponent* niagaraComp = UNiagaraFunctionLibrary::SpawnSystemAtLocation(this, popParticleEffect, GetActorLocation(), GetActorRotation());
+		// Set the shape of the particle effect on spawn
+		niagaraComp->SetNiagaraVariableFloat(FString("Uniform Sprite Size"), (ballCollider->GetScaledCapsuleRadius() * 2.0));
 	}
 
 }
@@ -56,15 +54,22 @@ void ABaseEnemy::BeginPlay()
 {
 	Super::BeginPlay();
 
-	// Setup Physics Constraints (Following Lines: Lock Location to XZ, Lock Rotation on XYZ)
-	ballCollider->SetConstraintMode(EDOFMode::Type::XZPlane);	
+	// Setup Physics Constraints (Following Lines: Lock Position on Y Axis, Lock Rotation on XYZ Axis)
+	if(ballCollider && ballCollider->GetBodyInstance()) {
+		ballCollider->BodyInstance.bLockYTranslation = true;
+		// If XYZ Rotation isn't locked, new impulses create unexpected velocities
+		ballCollider->BodyInstance.bLockXRotation = true;
+		ballCollider->BodyInstance.bLockYRotation = true;	
+		ballCollider->BodyInstance.bLockZRotation = true;
+		ballCollider->BodyInstance.SetDOFLock(EDOFMode::SixDOF);
 
-	// Setup Interaction with Floor (Add Predetermined Impulse to Return to same height every time)
-	ballCollider->OnComponentHit.AddDynamic(this, &ABaseEnemy::OnHit);	
-	ballCollider->OnComponentBeginOverlap.AddDynamic(this, &ABaseEnemy::OnOverlapBegin);
+		// Setup Interaction with Floor (Add Predetermined Impulse to Return to same height every time)
+		ballCollider->OnComponentHit.AddDynamic(this, &ABaseEnemy::OnHit);	
+		ballCollider->OnComponentBeginOverlap.AddDynamic(this, &ABaseEnemy::OnOverlapBegin);
+	}
+	
 	popPal = Cast<APopPal>(UGameplayStatics::GetPlayerCharacter(this, 0));
 
-	
 }
 
 // Called every frame
@@ -72,17 +77,16 @@ void ABaseEnemy::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	UE_LOG(LogTemp, Warning, TEXT("Enemy Rotation: %s"), *this->GetActorRotation().ToString());
+	// UE_LOG(LogTemp, Warning, TEXT("Enemy Rotation: %s"), *this->GetActorRotation().ToString());
 }
 
 void ABaseEnemy::OnHit(UPrimitiveComponent* hitComp, AActor* otherActor, UPrimitiveComponent* otherComp, FVector normalImpulse, const FHitResult& hitResult)
 {
 	if(otherActor->ActorHasTag("LevelFloor")) {
-
+		// Only adjust velocity if ball hitting floor (ImpactNormal.Z > 0)
 		// UE_LOG(LogTemp, Warning, TEXT("ImpactNormal: %s"), *hitResult.ImpactNormal.ToString());
-		// Only adjust velocity if ball hitting floor (floor hit if ImpactNormal.Z > 0)
 		if(hitResult.ImpactNormal.Z > 0.5f) {
-			// Calculate the new velocity for bouncing
+			// Calculate the new velocity for vertical bounce when floor is hit
 			FVector currentVelocity = ballCollider->GetComponentVelocity();
 			FVector newVelocity = FVector(currentVelocity.X, currentVelocity.Y, 0.0f);
 
