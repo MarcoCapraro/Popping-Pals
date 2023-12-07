@@ -5,6 +5,7 @@
 #include "GameFramework/Actor.h"
 #include "Kismet/GameplayStatics.h"
 #include "PoppingPals/GameMode/PoppingPalsGameModeBase.h"
+#include "PoppingPals/Character/PopPal.h"
 
 // Sets default values for this component's properties
 UHealthComponent::UHealthComponent()
@@ -25,6 +26,7 @@ void UHealthComponent::BeginPlay()
 	health = maxHealth;
 
 	GetOwner()->OnTakeAnyDamage.AddDynamic(this, &UHealthComponent::DamageTaken);
+	popPal = Cast<APopPal>(UGameplayStatics::GetPlayerCharacter(this, 0));
 	poppingPalGameMode = Cast<APoppingPalsGameModeBase>(UGameplayStatics::GetGameMode(this));
 	
 }
@@ -43,6 +45,11 @@ void UHealthComponent::DamageTaken(AActor* damagedActor, float damage, const UDa
 	// Make sure to avoid nonsensical values
 	if(damage <= 0.0f) return;
 	health -= damage;
+
+	// Debug Character Health
+	if(damagedActor == popPal) {
+		UE_LOG(LogTemp, Warning, TEXT("Health = %f"), health);
+	}
 
 	if(health <= 0.0f && poppingPalGameMode) {
 		poppingPalGameMode->ActorDied(damagedActor);
