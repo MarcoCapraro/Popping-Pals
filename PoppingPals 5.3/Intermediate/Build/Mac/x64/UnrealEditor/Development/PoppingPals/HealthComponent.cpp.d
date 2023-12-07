@@ -4089,4 +4089,24 @@
   ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/ServerStatReplicator.generated.h \
   Runtime/CoreOnline/Public/Online/CoreOnline.h \
   ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/GameModeBase.generated.h \
-  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Intermediate/Build/Mac/UnrealEditor/Inc/PoppingPals/UHT/PoppingPalsGameModeBase.generated.h
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Intermediate/Build/Mac/UnrealEditor/Inc/PoppingPals/UHT/PoppingPalsGameModeBase.generated.h \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Source/PoppingPals/Character/PopPal.h \
+  Runtime/Engine/Classes/GameFramework/Character.h \
+  Runtime/CoreUObject/Public/UObject/UObjectGlobals.h \
+  Runtime/CoreUObject/Public/UObject/CoreNet.h \
+  Runtime/Engine/Classes/Engine/NetSerialization.h \
+  Runtime/Engine/Classes/GameFramework/CharacterMovementReplication.h \
+  Runtime/Core/Public/Serialization/BitWriter.h \
+  Runtime/Core/Public/Containers/BitArray.h \
+  Runtime/Experimental/Iris/Core/Public/Iris/Serialization/IrisObjectReferencePackageMap.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/IrisCore/UHT/IrisObjectReferencePackageMap.generated.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/CharacterMovementReplication.generated.h \
+  Runtime/Engine/Classes/Animation/AnimationAsset.h \
+  Runtime/Engine/Classes/GameFramework/RootMotionSource.h \
+  Runtime/Core/Public/HAL/IConsoleManager.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/RootMotionSource.generated.h \
+  ../Intermediate/Build/Mac/UnrealEditor/Inc/Engine/UHT/Character.generated.h \
+  ../Plugins/EnhancedInput/Source/EnhancedInput/Public/InputActionValue.h \
+  Runtime/InputCore/Classes/InputCoreTypes.h \
+  ../Plugins/EnhancedInput/Intermediate/Build/Mac/UnrealEditor/Inc/EnhancedInput/UHT/InputActionValue.generated.h \
+  /Users/marco_capraro/Documents/GitHub/Popping-Pals/PoppingPals\ 5.3/Intermediate/Build/Mac/UnrealEditor/Inc/PoppingPals/UHT/PopPal.generated.h

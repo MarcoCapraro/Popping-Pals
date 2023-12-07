@@ -22,9 +22,6 @@ protected:
 
 private:
 	UPROPERTY(VisibleAnywhere)
-	class USkeletalMeshComponent* characterMesh;
-
-	UPROPERTY(VisibleAnywhere)
 	class USceneComponent* projectileSpawnComp;
 
 	UPROPERTY(EditDefaultsOnly)
@@ -53,6 +50,9 @@ private:
 	void Fire();
 
 public:	
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	class USkeletalMeshComponent* characterMesh;
+
 	// Used as a Firing Condition
 	UPROPERTY(VisibleAnywhere)
 	int projectileCount = 0;

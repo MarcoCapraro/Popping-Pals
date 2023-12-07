@@ -25,6 +25,7 @@ private:
 	float maxHealth = 99.0f;
 	float health = 0.0f;
 
+	class APopPal* popPal;
 	class APoppingPalsGameModeBase* poppingPalGameMode;
 
 	UFUNCTION()
