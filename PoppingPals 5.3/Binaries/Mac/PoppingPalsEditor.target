@@ -4,7 +4,7 @@
 	"Configuration": "Development",
 	"TargetType": "Editor",
 	"IsTestTarget": false,
-	"Architecture": "x64",
+	"Architecture": "arm64",
 	"Project": "../../PoppingPals.uproject",
 	"Launch": "$(EngineDir)/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor",
 	"LaunchCmd": "$(EngineDir)/Binaries/Mac/UnrealEditor-Cmd",
