@@ -47,6 +47,12 @@ void ABaseEnemy::HandleDestruction()
 		niagaraComp->SetNiagaraVariableFloat(FString("Uniform Sprite Size"), (ballCollider->GetScaledCapsuleRadius() * 2.0));
 	}
 
+	// Store a random int between 1 and 4, and in the event that variable is 1, spawn a power-up
+	int32 randomInt = FMath::RandRange(1,4);
+	if(randomInt == 1) {
+		// Get the enemies PowerUp Component that contains each power up
+	}
+
 }
 
 // Called when the game starts or when spawned
