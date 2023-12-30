@@ -19,6 +19,17 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	UPROPERTY(EditAnywhere, Category="Components")
+	class USphereComponent* powerUpColliderComp;
+
+	UPROPERTY(EditAnywhere, Category="Components")
+	class UStaticMeshComponent* powerUpMeshComp;
+
+	UPROPERTY(EditAnywhere, Category="Components")
+	class UNiagaraComponent* powerUpEffectComp;
+
+	class APopPal* popPal;
+
 	// Flashes power-up to signal player to pick it up before destruction
 	struct FTimerHandle powerUpFlashTimerHandle;
 
@@ -26,12 +37,6 @@ protected:
 	void FlashPowerUp();
 
 private:
-	UPROPERTY(EditAnywhere, Category="Components")
-	class UCapsuleComponent* powerUpColliderComp;
-
-	UPROPERTY(EditAnywhere, Category="Components")
-	class UNiagaraComponent* powerUpEffectComp;
-
 	UPROPERTY(EditAnywhere)
 	float linearDamp = 2.5f;
 
