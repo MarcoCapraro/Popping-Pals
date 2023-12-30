@@ -2,7 +2,10 @@
 
 
 #include "BasePowerUp.h"
-#include "Components/CapsuleComponent.h"
+#include "Components/SphereComponent.h"
+#include "Components/StaticMeshComponent.h"
+#include "PoppingPals/Character/PopPal.h"
+#include "Kismet/GameplayStatics.h"
 #include "NiagaraFunctionLibrary.h"
 #include "NiagaraComponent.h"
 
@@ -12,8 +15,11 @@ ABasePowerUp::ABasePowerUp()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	powerUpColliderComp = CreateDefaultSubobject<UCapsuleComponent>(TEXT("PowerUp Collider"));
+	powerUpColliderComp = CreateDefaultSubobject<USphereComponent>(TEXT("PowerUp Collider"));
 	RootComponent = powerUpColliderComp;
+
+	powerUpMeshComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("PowerUp Bubble Mesh"));
+	powerUpMeshComp->SetupAttachment(powerUpColliderComp);
 
 	powerUpEffectComp = CreateDefaultSubobject<UNiagaraComponent>(TEXT("PowerUp Effect"));
 	powerUpEffectComp->SetupAttachment(powerUpColliderComp);
@@ -25,6 +31,7 @@ ABasePowerUp::ABasePowerUp()
 	// Setup Collision Settings
 	powerUpColliderComp->SetNotifyRigidBodyCollision(true);
 	powerUpColliderComp->SetCollisionProfileName("PowerUpActor");
+	powerUpMeshComp->SetCollisionProfileName("NoCollision");
 }
 
 // Called when the game starts or when spawned
@@ -43,9 +50,9 @@ void ABasePowerUp::BeginPlay()
 
 		// Setup Interaction with Floor
 		powerUpColliderComp->OnComponentHit.AddDynamic(this, &ABasePowerUp::OnHit);	
-
-		// Handle Interaction with Player in SubClass (Overlap Event)
 	}
+
+	popPal = Cast<APopPal>(UGameplayStatics::GetPlayerCharacter(this, 0));
 	
 }
 
@@ -76,9 +83,10 @@ void ABasePowerUp::FlashPowerUp()
 	bVisible = !bVisible;
 	SetActorHiddenInGame(bVisible);
 
-	UE_LOG(LogTemp, Warning, TEXT("ElapsedTime = %f"), elapsedTime);
+	// UE_LOG(LogTemp, Warning, TEXT("ElapsedTime = %f"), elapsedTime);
 	// Instead of counter keep track of time elapsed
 	if(elapsedTime >= maxElapsedTime) {
+		elapsedTime = 0;
 		SetActorHiddenInGame(true);
 		GetWorldTimerManager().ClearTimer(powerUpFlashTimerHandle);
 		return;
@@ -87,7 +95,7 @@ void ABasePowerUp::FlashPowerUp()
 		bTimerRateDynamic = false;
 	}
 
-	UE_LOG(LogTemp, Warning, TEXT("Timer is Executing, Repeat Float = %f"), repeatTime);
+	// UE_LOG(LogTemp, Warning, TEXT("Timer is Executing, Repeat Float = %f"), repeatTime);
 	// Dynamically change timer rate to blink faster overtime
 	GetWorldTimerManager().SetTimer(powerUpFlashTimerHandle, this, &ABasePowerUp::FlashPowerUp, repeatTime, true, oldRepeatTime);
 }

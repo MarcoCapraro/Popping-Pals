@@ -57,6 +57,9 @@ public:
 	UPROPERTY(VisibleAnywhere)
 	int projectileCount = 0;
 
+	UPROPERTY(VisibleAnywhere)
+	int maxProjectiles = 1;
+
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
