@@ -4,26 +4,29 @@
 
 #include "CoreMinimal.h"
 #include "BasePowerUp.h"
-#include "IncreaseShotPowerUp.generated.h"
+#include "DoubleJumpPowerUp.generated.h"
 
+/**
+ * 
+ */
 UCLASS()
-class POPPINGPALS_API AIncreaseShotPowerUp : public ABasePowerUp
+class POPPINGPALS_API ADoubleJumpPowerUp : public ABasePowerUp
 {
 	GENERATED_BODY()
-	
+
 public:	
 	// Sets default values for this actor's properties
-	AIncreaseShotPowerUp();
+	ADoubleJumpPowerUp();
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
 	// Allows the player to use the power up for a set amount of time
-	struct FTimerHandle twoShotHandle;
+	struct FTimerHandle doubleJumpHandle;
 
 	// Toggles the power ups visibility
-	void TwoShot();
+	void DoubleJump();
 
 private:
 	UPROPERTY(EditAnywhere)

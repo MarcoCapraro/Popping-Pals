@@ -1,12 +1,12 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "IncreaseShotPowerUp.h"
+#include "DoubleJumpPowerUp.h"
 #include "Components/SphereComponent.h"
 #include "PoppingPals/Character/PopPal.h"
 
 // Sets default values
-AIncreaseShotPowerUp::AIncreaseShotPowerUp()
+ADoubleJumpPowerUp::ADoubleJumpPowerUp()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
@@ -14,21 +14,21 @@ AIncreaseShotPowerUp::AIncreaseShotPowerUp()
 }
 
 // Called when the game starts or when spawned
-void AIncreaseShotPowerUp::BeginPlay()
+void ADoubleJumpPowerUp::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	powerUpColliderComp->OnComponentBeginOverlap.AddDynamic(this, &AIncreaseShotPowerUp::OnOverlapBegin);
+	powerUpColliderComp->OnComponentBeginOverlap.AddDynamic(this, &ADoubleJumpPowerUp::OnOverlapBegin);
 }
 
 // Called every frame
-void AIncreaseShotPowerUp::Tick(float DeltaTime)
+void ADoubleJumpPowerUp::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
 }
 
-void AIncreaseShotPowerUp::OnOverlapBegin(UPrimitiveComponent* overlappedComponent, AActor* otherActor, 
+void ADoubleJumpPowerUp::OnOverlapBegin(UPrimitiveComponent* overlappedComponent, AActor* otherActor, 
 UPrimitiveComponent* otherComp, int32 otherBodyIndex, bool bFromSweep, const FHitResult& sweepResult)
 {
 
@@ -36,9 +36,9 @@ UPrimitiveComponent* otherComp, int32 otherBodyIndex, bool bFromSweep, const FHi
 	if(otherActor && otherActor != this) {
 		// If the overlap occurs with the player character, apply power up effect
 		if(otherActor == popPal) {
-			if(popPal->maxProjectiles < 2) {
-				popPal->maxProjectiles++;
-				GetWorldTimerManager().SetTimer(twoShotHandle, this, &AIncreaseShotPowerUp::TwoShot, 0.1f, false, powerUpDuration);
+			if(popPal->maxJumpCount < 2) {
+				popPal->maxJumpCount++;
+				GetWorldTimerManager().SetTimer(doubleJumpHandle, this, &ADoubleJumpPowerUp::DoubleJump, 0.1f, false, powerUpDuration);
 				
 				// Hide powerup and disable collisions
 				GetWorldTimerManager().ClearTimer(powerUpFlashTimerHandle);
@@ -50,9 +50,9 @@ UPrimitiveComponent* otherComp, int32 otherBodyIndex, bool bFromSweep, const FHi
 }
 
 // Toggles the power ups visibility
-void AIncreaseShotPowerUp::TwoShot() {
-	UE_LOG(LogTemp, Warning, TEXT("IncreaseShotPower Finished"));
-	popPal->maxProjectiles = 1;
-	GetWorldTimerManager().ClearTimer(twoShotHandle);
+void ADoubleJumpPowerUp::DoubleJump() {
+	UE_LOG(LogTemp, Warning, TEXT("DoubleJump Finished"));
+	popPal->maxJumpCount = 1;
+	GetWorldTimerManager().ClearTimer(doubleJumpHandle);
 	Destroy();
 }
