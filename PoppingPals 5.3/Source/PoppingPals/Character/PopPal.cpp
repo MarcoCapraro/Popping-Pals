@@ -30,7 +30,7 @@ APopPal::APopPal()
 	bUseControllerRotationPitch = false;
 	bUseControllerRotationRoll = false;
 
-	UCharacterMovementComponent* const movementComp = GetCharacterMovement();
+	movementComp = GetCharacterMovement();
 	if(movementComp) {
 		movementComp->bOrientRotationToMovement = true;
 		movementComp->bOrientRotationToMovement = false;
@@ -53,6 +53,9 @@ void APopPal::HandleDestruction()
 void APopPal::BeginPlay()
 {
 	Super::BeginPlay();
+
+	maxJumpCount = 1;
+	jumpCount = 0;
 
 	APlayerController* popPalController = GetWorld()->GetFirstPlayerController();
 	if(popPalController) {
@@ -77,7 +80,8 @@ void APopPal::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 	if(UEnhancedInputComponent* EnhancedInputComponent = CastChecked<UEnhancedInputComponent>(PlayerInputComponent)) {
 		EnhancedInputComponent->BindAction(moveRightAction, ETriggerEvent::Triggered, this, &APopPal::MoveRight);
-		EnhancedInputComponent->BindAction(jumpAction, ETriggerEvent::Triggered, this, &APopPal::Jump);
+		EnhancedInputComponent->BindAction(jumpAction, ETriggerEvent::Started, this, &APopPal::OnStartJump);
+		EnhancedInputComponent->BindAction(jumpAction, ETriggerEvent::Canceled, this, &APopPal::OnStopJump);
 		EnhancedInputComponent->BindAction(fireAction, ETriggerEvent::Triggered, this, &APopPal::Fire);
 	}
 }
@@ -109,9 +113,31 @@ void APopPal::MoveRight(const FInputActionValue& value)
 	AddMovementInput(forwardDirection, moveForwardValue);
 }
 
-void APopPal::Jump()
+// Overrides jumping condition to allow multiple jumps when power up activated
+bool APopPal::CanJumpInternal_Implementation() const
 {
-	bPressedJump = true;
-	JumpKeyHoldTime = 0.0f;
+	// FString valid = (movementComp->IsFalling() && jumpCount > 0 && jumpCount < maxJumpCount) ? "True" : "False";
+	// UE_LOG(LogTemp, Warning, TEXT("CanJump Valid = %s"), *valid);
+	return Super::CanJumpInternal_Implementation() || 
+	(movementComp->IsFalling() && jumpCount > 0 && jumpCount <= maxJumpCount);
 }
 
+// Resets jump counter once player is back on the ground
+void APopPal::Landed(const FHitResult& Hit)
+{
+	// UE_LOG(LogTemp, Warning, TEXT("Player Landed"));
+	jumpCount = 0;
+}
+
+// Event execution to trigger a single jump
+void APopPal::OnStartJump()
+{
+	bPressedJump = true;
+	jumpCount++;
+}
+
+// Event execution to signal jumping has stopped
+void APopPal::OnStopJump()
+{
+	bPressedJump = false;
+}

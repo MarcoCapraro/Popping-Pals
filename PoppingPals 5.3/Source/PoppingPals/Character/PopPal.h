@@ -45,9 +45,15 @@ private:
 	UPROPERTY(EditAnywhere, Category = Input)
 	class UInputAction* fireAction;
 
+	class UCharacterMovementComponent* movementComp;
+
 	void MoveRight(const FInputActionValue& value);
-	void Jump();
+	void OnStartJump();
+	void OnStopJump();
 	void Fire();
+
+	virtual bool CanJumpInternal_Implementation() const override;
+	virtual void Landed(const FHitResult& Hit) override;
 
 public:	
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
@@ -59,6 +65,11 @@ public:
 
 	UPROPERTY(VisibleAnywhere)
 	int maxProjectiles = 1;
+
+	UPROPERTY(EditAnywhere, Category="Movement")
+	int32 maxJumpCount;
+
+	int32 jumpCount;
 
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
