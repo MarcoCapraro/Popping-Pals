@@ -42,6 +42,7 @@ UPrimitiveComponent* otherComp, int32 otherBodyIndex, bool bFromSweep, const FHi
 				
 				// Hide powerup and disable collisions
 				GetWorldTimerManager().ClearTimer(powerUpFlashTimerHandle);
+				HandleDestruction();
 				SetActorHiddenInGame(true);
 				powerUpColliderComp->SetCollisionProfileName("NoCollision");
 			}
@@ -55,4 +56,8 @@ void ADoubleJumpPowerUp::DoubleJump() {
 	popPal->maxJumpCount = 1;
 	GetWorldTimerManager().ClearTimer(doubleJumpHandle);
 	Destroy();
+}
+
+void ADoubleJumpPowerUp::HandleDestruction() {
+	Super::HandleDestruction();
 }
