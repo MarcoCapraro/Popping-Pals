@@ -71,6 +71,11 @@ public:
 
 	int32 jumpCount;
 
+	// Keep track of identical active powerups
+	int32 shotUpgradeCount = 0;
+	int32 jumpUpgradeCount = 0;
+	int32 shieldUpgradeCount = 0;
+
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 

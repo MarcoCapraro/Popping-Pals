@@ -36,11 +36,17 @@ UPrimitiveComponent* otherComp, int32 otherBodyIndex, bool bFromSweep, const FHi
 	if(otherActor && otherActor != this) {
 		// If the overlap occurs with the player character, apply power up effect
 		if(otherActor == popPal) {
-			if(popPal->maxJumpCount < 2) {
-				popPal->maxJumpCount++;
+			if(!bPickedUp) {
+				bPickedUp = true;
+
+				// Increase num of allowed fire projectiles to 2 and regardless increment counter of two shot power ups picked up
+				if(popPal->maxJumpCount < 2) { popPal->maxJumpCount++; }
+				popPal->jumpUpgradeCount++;
+
+				UE_LOG(LogTemp, Warning, TEXT("Double Jumps Picked Up = %i"), popPal->jumpUpgradeCount);
 				GetWorldTimerManager().SetTimer(doubleJumpHandle, this, &ADoubleJumpPowerUp::DoubleJump, 0.1f, false, powerUpDuration);
 				
-				// Hide powerup and disable collisions
+				// Hide powerup and prep for destruction
 				GetWorldTimerManager().ClearTimer(powerUpFlashTimerHandle);
 				HandleDestruction();
 				SetActorHiddenInGame(true);
@@ -53,7 +59,12 @@ UPrimitiveComponent* otherComp, int32 otherBodyIndex, bool bFromSweep, const FHi
 // Toggles the power ups visibility
 void ADoubleJumpPowerUp::DoubleJump() {
 	UE_LOG(LogTemp, Warning, TEXT("DoubleJump Finished"));
-	popPal->maxJumpCount = 1;
+
+	// Handles overlapping effects of the same power up
+	if(popPal->jumpUpgradeCount <= 1) { popPal->maxJumpCount = 1; }
+	popPal->jumpUpgradeCount--;
+
+	UE_LOG(LogTemp, Warning, TEXT("Double Jumps Picked Up = %i"), popPal->jumpUpgradeCount);
 	GetWorldTimerManager().ClearTimer(doubleJumpHandle);
 	Destroy();
 }
