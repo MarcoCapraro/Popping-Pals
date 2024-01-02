@@ -39,6 +39,8 @@ protected:
 	// Toggles the power ups visibility
 	void FlashPowerUp();
 
+	bool bPickedUp = false;
+
 private:
 	UPROPERTY(EditAnywhere)
 	float linearDamp = 2.5f;

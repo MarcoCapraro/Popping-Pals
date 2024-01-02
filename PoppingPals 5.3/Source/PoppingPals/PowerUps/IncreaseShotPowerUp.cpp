@@ -36,11 +36,17 @@ UPrimitiveComponent* otherComp, int32 otherBodyIndex, bool bFromSweep, const FHi
 	if(otherActor && otherActor != this) {
 		// If the overlap occurs with the player character, apply power up effect
 		if(otherActor == popPal) {
-			if(popPal->maxProjectiles < 2) {
-				popPal->maxProjectiles++;
+			if(!bPickedUp) {
+				bPickedUp = true;
+
+				// Increase num of allowed fire projectiles to 2 and regardless increment counter of two shot power ups picked up
+				if(popPal->maxProjectiles < 2) { popPal->maxProjectiles++; }
+				popPal->shotUpgradeCount++;
+
+				// UE_LOG(LogTemp, Warning, TEXT("Two Shots Picked Up = %i"), popPal->shotUpgradeCount);
 				GetWorldTimerManager().SetTimer(twoShotHandle, this, &AIncreaseShotPowerUp::TwoShot, 0.1f, false, powerUpDuration);
 				
-				// Hide powerup and disable collisions
+				// Hide powerup and prep for destruction
 				GetWorldTimerManager().ClearTimer(powerUpFlashTimerHandle);
 				SetActorHiddenInGame(true);
 				HandleDestruction();
@@ -53,7 +59,12 @@ UPrimitiveComponent* otherComp, int32 otherBodyIndex, bool bFromSweep, const FHi
 // Toggles the power ups visibility
 void AIncreaseShotPowerUp::TwoShot() {
 	UE_LOG(LogTemp, Warning, TEXT("IncreaseShotPower Finished"));
-	popPal->maxProjectiles = 1;
+
+	// Handles overlapping effects of the same power up
+	if(popPal->shotUpgradeCount <= 1) { popPal->maxProjectiles = 1; }
+	popPal->shotUpgradeCount--;
+
+	// UE_LOG(LogTemp, Warning, TEXT("Two Shots Picked Up = %i"), popPal->shotUpgradeCount);
 	GetWorldTimerManager().ClearTimer(twoShotHandle);
 	Destroy();
 }
