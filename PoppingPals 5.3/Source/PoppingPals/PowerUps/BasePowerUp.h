@@ -28,6 +28,9 @@ protected:
 	UPROPERTY(EditAnywhere, Category="Components")
 	class UNiagaraComponent* powerUpEffectComp;
 
+	UPROPERTY(EditAnywhere, Category="VFX")
+	class UNiagaraSystem* pickUpEffect;
+
 	class APopPal* popPal;
 
 	// Flashes power-up to signal player to pick it up before destruction
@@ -58,5 +61,5 @@ private:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
+	void HandleDestruction();
 };

@@ -70,7 +70,7 @@ void ABasePowerUp::OnHit(UPrimitiveComponent* hitComp, AActor* otherActor, UPrim
 		// When the powerup hits the floor stop simulating physics to prevent bounce
 		powerUpColliderComp->SetSimulatePhysics(false);
 		 
-		// Setup Timer to destory powerup after duration seconds
+		// Setup Timer to destroy powerup after duration seconds
 		GetWorldTimerManager().SetTimer(powerUpFlashTimerHandle, this, &ABasePowerUp::FlashPowerUp, repeatTime, true, initialDelay);
 	}
 }
@@ -89,6 +89,7 @@ void ABasePowerUp::FlashPowerUp()
 		elapsedTime = 0;
 		SetActorHiddenInGame(true);
 		GetWorldTimerManager().ClearTimer(powerUpFlashTimerHandle);
+		Destroy();
 		return;
 	} else if((elapsedTime >= maxElapsedTime / 1.5) && bTimerRateDynamic) {
 		repeatTime = repeatTime / 2;
@@ -98,4 +99,14 @@ void ABasePowerUp::FlashPowerUp()
 	// UE_LOG(LogTemp, Warning, TEXT("Timer is Executing, Repeat Float = %f"), repeatTime);
 	// Dynamically change timer rate to blink faster overtime
 	GetWorldTimerManager().SetTimer(powerUpFlashTimerHandle, this, &ABasePowerUp::FlashPowerUp, repeatTime, true, oldRepeatTime);
+}
+
+void ABasePowerUp::HandleDestruction() {
+	// Setup pickup effect and sound
+	if(pickUpEffect) {
+		UNiagaraComponent* niagaraComp = UNiagaraFunctionLibrary::SpawnSystemAtLocation(this, pickUpEffect, GetActorLocation(), GetActorRotation());
+		// Set the shape of the particle effect on spawn
+		niagaraComp->SetNiagaraVariableFloat(FString("Sphere Radius"), (powerUpColliderComp->GetScaledSphereRadius() / 2));
+	}
+
 }
