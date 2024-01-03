@@ -102,6 +102,11 @@ void ABasePowerUp::FlashPowerUp()
 }
 
 void ABasePowerUp::HandleDestruction() {
+	// Clear flash timer, hide actor, and disable collisions
+	GetWorldTimerManager().ClearTimer(powerUpFlashTimerHandle);
+	SetActorHiddenInGame(true);
+	powerUpColliderComp->SetCollisionProfileName("NoCollision");
+
 	// Setup pickup effect and sound
 	if(pickUpEffect) {
 		UNiagaraComponent* niagaraComp = UNiagaraFunctionLibrary::SpawnSystemAtLocation(this, pickUpEffect, GetActorLocation(), GetActorRotation());

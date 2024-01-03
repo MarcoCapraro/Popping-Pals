@@ -43,14 +43,11 @@ UPrimitiveComponent* otherComp, int32 otherBodyIndex, bool bFromSweep, const FHi
 				if(popPal->maxJumpCount < 2) { popPal->maxJumpCount++; }
 				popPal->jumpUpgradeCount++;
 
-				UE_LOG(LogTemp, Warning, TEXT("Double Jumps Picked Up = %i"), popPal->jumpUpgradeCount);
+				// UE_LOG(LogTemp, Warning, TEXT("Double Jumps Picked Up = %i"), popPal->jumpUpgradeCount);
 				GetWorldTimerManager().SetTimer(doubleJumpHandle, this, &ADoubleJumpPowerUp::DoubleJump, 0.1f, false, powerUpDuration);
 				
-				// Hide powerup and prep for destruction
-				GetWorldTimerManager().ClearTimer(powerUpFlashTimerHandle);
+				// Prepare powerup for destruction
 				HandleDestruction();
-				SetActorHiddenInGame(true);
-				powerUpColliderComp->SetCollisionProfileName("NoCollision");
 			}
 		}
 	}
@@ -64,7 +61,7 @@ void ADoubleJumpPowerUp::DoubleJump() {
 	if(popPal->jumpUpgradeCount <= 1) { popPal->maxJumpCount = 1; }
 	popPal->jumpUpgradeCount--;
 
-	UE_LOG(LogTemp, Warning, TEXT("Double Jumps Picked Up = %i"), popPal->jumpUpgradeCount);
+	// UE_LOG(LogTemp, Warning, TEXT("Double Jumps Picked Up = %i"), popPal->jumpUpgradeCount);
 	GetWorldTimerManager().ClearTimer(doubleJumpHandle);
 	Destroy();
 }

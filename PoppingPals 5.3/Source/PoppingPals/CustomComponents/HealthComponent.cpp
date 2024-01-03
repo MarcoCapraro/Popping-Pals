@@ -44,6 +44,8 @@ void UHealthComponent::DamageTaken(AActor* damagedActor, float damage, const UDa
 {
 	// Make sure to avoid nonsensical values
 	if(damage <= 0.0f) return;
+
+	// If player is damagedActor and shield, don't take damage, destroy shield (decrement shieldUpgradeCount)
 	health -= damage;
 
 	// Debug Character Health

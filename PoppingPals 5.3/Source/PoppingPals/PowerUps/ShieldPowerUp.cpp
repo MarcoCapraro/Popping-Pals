@@ -38,25 +38,19 @@ UPrimitiveComponent* otherComp, int32 otherBodyIndex, bool bFromSweep, const FHi
 		if(otherActor == popPal) {
 			if(!bPickedUp) {
 				bPickedUp = true;
+				popPal->shieldUpgradeCount++;
 
-				GetWorldTimerManager().SetTimer(shieldHandle, this, &AShieldPowerUp::Shield, 0.1f, false, powerUpDuration);
+				// If the shield power up isn't active yet apply effect
+				if(popPal->shieldUpgradeCount <= 1) {
+					// Create an actor sphere around player, with transparent material
+
+				}
 				
-				// Hide powerup and prep for destruction
-				GetWorldTimerManager().ClearTimer(powerUpFlashTimerHandle);
-				SetActorHiddenInGame(true);
+				// Prepare powerup for destruction
 				HandleDestruction();
-				powerUpColliderComp->SetCollisionProfileName("NoCollision");
 			}
 		}
 	}
-}
-
-// Toggles the power ups visibility
-void AShieldPowerUp::Shield() {
-	UE_LOG(LogTemp, Warning, TEXT("Shield Finished"));
-	
-	GetWorldTimerManager().ClearTimer(shieldHandle);
-	Destroy();
 }
 
 void AShieldPowerUp::HandleDestruction() {
