@@ -38,16 +38,18 @@ UPrimitiveComponent* otherComp, int32 otherBodyIndex, bool bFromSweep, const FHi
 		if(otherActor == popPal) {
 			if(!bPickedUp) {
 				bPickedUp = true;
-				popPal->shieldUpgradeCount++;
 
-				// If the shield power up isn't active yet apply effect
-				if(popPal->shieldUpgradeCount <= 1) {
-					// Create an actor sphere around player, with transparent material
-
+				if(popPal->shieldComp) {
+					// If the shield power up isn't active yet apply effect
+					if(!popPal->bShieldVisible) {
+						popPal->bShieldVisible = true;
+						popPal->shieldComp->ToggleVisibility();
+					}
 				}
 				
-				// Prepare powerup for destruction
+				// Destroy powerup drop
 				HandleDestruction();
+				Destroy();
 			}
 		}
 	}

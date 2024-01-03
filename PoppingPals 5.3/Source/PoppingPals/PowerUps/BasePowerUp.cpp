@@ -105,6 +105,7 @@ void ABasePowerUp::HandleDestruction() {
 	// Clear flash timer, hide actor, and disable collisions
 	GetWorldTimerManager().ClearTimer(powerUpFlashTimerHandle);
 	SetActorHiddenInGame(true);
+	powerUpColliderComp->SetSimulatePhysics(false);
 	powerUpColliderComp->SetCollisionProfileName("NoCollision");
 
 	// Setup pickup effect and sound

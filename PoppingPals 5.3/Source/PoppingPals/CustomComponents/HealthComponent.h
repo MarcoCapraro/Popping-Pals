@@ -28,6 +28,17 @@ private:
 	class APopPal* popPal;
 	class APoppingPalsGameModeBase* poppingPalGameMode;
 
+	UPROPERTY(EditAnywhere, Category="VFX")
+	class UNiagaraSystem* destroyEffect;
+
+	// Allows the player to flash when hit
+	struct FTimerHandle playerFlashHandle;
+
+	// Flash functionality
+	void PlayerFlash();
+
+	int16 flashLoopCounter = 0;
+
 	UFUNCTION()
 	void DamageTaken(AActor* damagedActor, float damage, const UDamageType* damageType, class AController* instigator, AActor* damageCauser);
 
