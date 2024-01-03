@@ -19,12 +19,6 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	// Allows the player to use the power up for a set amount of time
-	struct FTimerHandle shieldHandle;
-
-	// Toggles the power ups visibility
-	void Shield();
-
 private:
 	UPROPERTY(EditAnywhere)
 	float powerUpDuration = 6.0f;

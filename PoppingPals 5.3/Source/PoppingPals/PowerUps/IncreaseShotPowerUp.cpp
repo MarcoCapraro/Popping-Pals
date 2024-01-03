@@ -47,10 +47,7 @@ UPrimitiveComponent* otherComp, int32 otherBodyIndex, bool bFromSweep, const FHi
 				GetWorldTimerManager().SetTimer(twoShotHandle, this, &AIncreaseShotPowerUp::TwoShot, 0.1f, false, powerUpDuration);
 				
 				// Hide powerup and prep for destruction
-				GetWorldTimerManager().ClearTimer(powerUpFlashTimerHandle);
-				SetActorHiddenInGame(true);
 				HandleDestruction();
-				powerUpColliderComp->SetCollisionProfileName("NoCollision");
 			}
 		}
 	}
