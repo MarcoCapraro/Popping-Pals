@@ -57,13 +57,15 @@ void APopPal::BeginPlay()
 	maxJumpCount = 1;
 	jumpCount = 0;
 
+	// Store reference of shield mesh for visibility toggling in other files
+	shieldComp = Cast<UStaticMeshComponent>(GetComponentByClass(UStaticMeshComponent::StaticClass())); 
+
 	APlayerController* popPalController = GetWorld()->GetFirstPlayerController();
 	if(popPalController) {
 		if(UEnhancedInputLocalPlayerSubsystem* subSystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(popPalController->GetLocalPlayer())) {
 			subSystem->AddMappingContext(popPalContext, 0);
 		}
 	}
-	
 }
 
 // Called every frame

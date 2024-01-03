@@ -74,7 +74,12 @@ public:
 	// Keep track of identical active powerups
 	int32 shotUpgradeCount = 0;
 	int32 jumpUpgradeCount = 0;
-	int32 shieldUpgradeCount = 0;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	bool bShieldVisible = false;
+
+	// Reference to shield component
+	class UStaticMeshComponent* shieldComp;
 
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
