@@ -58,7 +58,7 @@ void UHealthComponent::DamageTaken(AActor* damagedActor, float damage, const UDa
 				if(destroyEffect) {
 					UNiagaraComponent* niagaraComp = UNiagaraFunctionLibrary::SpawnSystemAtLocation(this, destroyEffect, popPal->GetActorLocation(), popPal->GetActorRotation());
 					// Set the shape of the particle effect on spawn
-					niagaraComp->SetNiagaraVariableFloat(FString("Sphere Radius"), 30);
+					niagaraComp->SetNiagaraVariableFloat(FString("Sphere Radius"), 75);
 				}
 
 				return;
