@@ -31,6 +31,9 @@ private:
 	UPROPERTY(EditAnywhere, Category="VFX")
 	class UNiagaraSystem* destroyEffect;
 
+	UPROPERTY(EditAnywhere, Category="VFX")
+	class UNiagaraSystem* healEffect;
+
 	// Allows the player to flash when hit
 	struct FTimerHandle playerFlashHandle;
 
@@ -45,4 +48,5 @@ private:
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+	void IncreasePlayerHealth();
 };

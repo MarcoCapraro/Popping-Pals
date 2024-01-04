@@ -79,6 +79,17 @@ void UHealthComponent::DamageTaken(AActor* damagedActor, float damage, const UDa
 	}
 }
 
+void UHealthComponent::IncreasePlayerHealth() {
+	if(health < 99.0) {
+		health += 33.0;
+	}
+
+	// Play a health particle effect to indicate player was healed
+	if(healEffect) {
+		UNiagaraComponent* niagaraComp = UNiagaraFunctionLibrary::SpawnSystemAtLocation(this, healEffect, popPal->GetActorLocation(), popPal->GetActorRotation());
+	}
+}
+
 void UHealthComponent::PlayerFlash()
 {
 	popPal->characterMesh->ToggleVisibility();
