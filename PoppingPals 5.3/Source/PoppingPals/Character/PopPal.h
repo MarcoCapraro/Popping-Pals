@@ -66,6 +66,9 @@ public:
 	UPROPERTY(VisibleAnywhere)
 	int maxProjectiles = 1;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	bool bCanShoot = false;
+
 	UPROPERTY(EditAnywhere, Category="Movement")
 	int32 maxJumpCount;
 
