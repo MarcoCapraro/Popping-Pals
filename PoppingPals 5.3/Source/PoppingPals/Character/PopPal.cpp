@@ -91,14 +91,15 @@ void APopPal::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 void APopPal::Fire()
 {
 	if(projectileCount < maxProjectiles) {
+		bCanShoot = true;
 		// Uncomment line below ONLY when aspect ratio is NOT constrained
 		// DrawDebugSphere(GetWorld(), projectileSpawnComp->GetComponentLocation(), 10.0f, 15, FColor::Red, false, 3.0f);
 		FVector spawnLoc = projectileSpawnComp->GetComponentLocation();
 		FRotator spawnRot = projectileSpawnComp->GetComponentRotation();
-
+		
 		AProjectile* projectile = GetWorld()->SpawnActor<AProjectile>(projectileClass, spawnLoc, spawnRot);
 		projectileCount++;
-	}
+	} else { bCanShoot = false; }
 }
 
 void APopPal::MoveRight(const FInputActionValue& value)
