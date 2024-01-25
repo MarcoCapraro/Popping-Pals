@@ -51,7 +51,7 @@ private:
 	void OnStartJump();
 	void OnStopJump();
 	void Fire();
-
+	
 	virtual bool CanJumpInternal_Implementation() const override;
 	virtual void Landed(const FHitResult& Hit) override;
 
