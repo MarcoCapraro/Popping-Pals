@@ -4,6 +4,8 @@
 #include "HealthComponent.h"
 #include "GameFramework/Actor.h"
 #include "Kismet/GameplayStatics.h"
+#include "Components/SceneComponent.h"
+#include "Components/StaticMeshComponent.h"
 #include "PoppingPals/GameMode/PoppingPalsGameModeBase.h"
 #include "PoppingPals/Character/PopPal.h"
 #include "NiagaraFunctionLibrary.h"
@@ -92,7 +94,18 @@ void UHealthComponent::IncreasePlayerHealth() {
 
 void UHealthComponent::PlayerFlash()
 {
+	// Toggle Visibility of the Children Components (UStaticMesh), Except Shield
+	TArray<USceneComponent*> childrenMesh;
+	popPal->characterMesh->GetChildrenComponents(false, childrenMesh);
+	for(USceneComponent* comp : childrenMesh) {
+		if(comp->IsA(UStaticMeshComponent::StaticClass()) && comp->GetName() != TEXT("Bubble Shield")) {
+			comp->ToggleVisibility();
+		}
+	}
+
+	// Toggle Player Character Mesh Visibility to Simulate "Taken Damage"
 	popPal->characterMesh->ToggleVisibility();
+
 	if(flashLoopCounter > 6) {
 		flashLoopCounter = 0;
 		GetWorld()->GetTimerManager().ClearTimer(playerFlashHandle);
