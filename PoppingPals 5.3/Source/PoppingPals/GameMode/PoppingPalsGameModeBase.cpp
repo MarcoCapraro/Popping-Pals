@@ -3,6 +3,7 @@
 
 #include "PoppingPalsGameModeBase.h"
 #include "Kismet/GameplayStatics.h"
+#include "Kismet/KismetMathLibrary.h"
 #include "PoppingPals/Character/PopPal.h"
 #include "PoppingPals/Enemies/BaseEnemy.h"
 #include "PoppingPals/Enemies/EnemyT4.h"
@@ -42,6 +43,14 @@ void APoppingPalsGameModeBase::ActorDied(AActor* deadActor)
             enemy->HandleDestruction();
         }
 
+        // Create a loot table for all power ups that can drop, including a null item (no drop)
+        // each item in the loot table has associated class and weight
+
+        // Create a function that calculates the total probability
+        // Sums the weight of all items in the loot table (must = 100)
+        // Generate a random number (1,100) and then compare that to the range of each weight
+        // If in the range of an item, spawn it, or if its the null item do nothing
+        
 
         if(targetBallEnemies == 0) {
             // If player destroys all ball enemies in a level, player wins the game (bool bWonGame = true)
@@ -87,4 +96,41 @@ int32 APoppingPalsGameModeBase::GetEnemyBallCount()
 
     // Iterate through array and determine total count
     return totalCount;
+}
+
+
+void APoppingPalsGameModeBase::RandomDropRate(TArray<FItem> itemTable, TSubclassOf<AActor> &itemDrop, bool &dropRateEqual100)
+{
+    // Declare temporary integer array for storing all "Drop Rates"
+    TArray <int32> DropRateArray;
+    int32 EqualTo100 = 0;
+ 
+    // Add input array drop rates to temporary array while summing the values to create a range "max" for each Loot Item
+    for (int x = 0; x < itemTable.Num(); ++x){
+        if (x == 0){
+            DropRateArray.Add(FMath::Abs(itemTable[x].dropRate));
+        } else {
+            DropRateArray.Add(FMath::Abs(itemTable[x].dropRate) + (DropRateArray[x-1]));
+        }
+    }
+ 
+    // Ensure all "Drop Rates" sum to EXACTLY 100
+ 
+    if (DropRateArray.Last() == 100){   
+        // Generate a random number
+        int32 DropIndex = UKismetMathLibrary::RandomIntegerInRange(1, 100);      
+ 
+        // Start with the lowest range "max value" and keep moving up until random int <= max of range
+        for (int x = 0; x < DropRateArray.Num(); ++x){
+            if (DropIndex <= DropRateArray[x]){
+                itemDrop = itemTable[x].itemClass;
+                break;
+            }
+        }
+        dropRateEqual100 = true;
+    // If drop rates do NOT sum to exactly 100 return a false boolean and a null drop item
+    } else {
+        itemDrop = nullptr;
+        dropRateEqual100 = false;
+    }
 }
