@@ -53,6 +53,7 @@ void AProjectile::OnHit(UPrimitiveComponent* hitComp, AActor* otherActor, UPrimi
 		// Handle Popping (Destruction) of Ball Enemies
 		if(otherActor->IsA(ABaseEnemy::StaticClass())) {
 			UGameplayStatics::ApplyDamage(otherActor, damage, nullptr, this, damageTypeClass);
+			// Get PowerUpComponent and call powerUpDropRoll() -> determines whether or not a power up drops after splitting an enemy
 		}
 
 		// UGameplayStatics::ApplyDamage(otherActor, damage, myOwnerInstigator, this, damageTypeClass);
