@@ -28,6 +28,8 @@ class POPPINGPALS_API LootSystem
 
 public:
 	LootSystem();
+	LootSystem(TArray<FItem> itemTable);
+	
 	~LootSystem();
 	
 private:

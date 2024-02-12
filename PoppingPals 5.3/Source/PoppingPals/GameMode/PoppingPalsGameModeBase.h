@@ -16,6 +16,9 @@ public:
 	virtual void BeginPlay() override;
 	void ActorDied(AActor* deadActor);
 
+	UPROPERTY(EditAnywhere, Category="Loot")
+	TArray<FItem> itemTable;
+
 protected:
 	UFUNCTION(BlueprintImplementableEvent)
 	void GameOver(bool bWonGame);
