@@ -4,23 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
+#include "PoppingPals/CustomSystems/LootSystem.h"
 #include "PoppingPalsGameModeBase.generated.h"
-
-// Custom struct that ties an object class to an integer to determine a drop rate
-USTRUCT()
-struct FItem
-{
-	GENERATED_USTRUCT_BODY()
-
-public:
-	UPROPERTY(EditAnywhere, Category="Loot Struct")
-	TSubclassOf<AActor> itemClass;
-
-	UPROPERTY(EditAnywhere, Category="Loot Struct")
-	int32 dropRate;
-	
-};
-
 
 UCLASS()
 class POPPINGPALS_API APoppingPalsGameModeBase : public AGameModeBase
@@ -30,9 +15,6 @@ class POPPINGPALS_API APoppingPalsGameModeBase : public AGameModeBase
 public:
 	virtual void BeginPlay() override;
 	void ActorDied(AActor* deadActor);
-
-	UFUNCTION(Category="Loot Table")
-	static void RandomDropRate(TArray<FItem> itemTable, TSubclassOf<AActor> &itemDrop, bool &dropRateEqual100);
 
 protected:
 	UFUNCTION(BlueprintImplementableEvent)
@@ -44,4 +26,6 @@ private:
 
 	void HandleGameStart();
 	int32 GetEnemyBallCount();
+
+	LootSystem lootSystem;
 };
