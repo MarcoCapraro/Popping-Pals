@@ -10,12 +10,16 @@
 
 LootSystem::LootSystem()
 {
-	FItem item1 = {ADoubleJumpPowerUp::StaticClass(), 15};
-	FItem item2 = {AHealthPowerUp::StaticClass(), 15};
-	FItem item3 = {AIncreaseShotPowerUp::StaticClass(), 15};
-	FItem item4 = {AShieldPowerUp::StaticClass(), 5};
-	FItem item5 = {nullptr, 50};
-	lootTable = {item1, item2, item3, item4, item5};
+	FItem item1 = {nullptr, 100};
+	lootTable = {item1};
+}
+
+LootSystem::LootSystem(TArray<FItem> itemTable)
+{
+	// Add all items to the lootTable
+	for(int i = 0; i < itemTable.Num(); i++) {
+		lootTable.Add({itemTable[i].itemClass, itemTable[i].dropRate});
+	}
 }
 
 LootSystem::~LootSystem()

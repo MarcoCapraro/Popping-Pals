@@ -51,7 +51,12 @@ void APoppingPalsGameModeBase::ActorDied(AActor* deadActor)
         lootSystem.RandomDropRate(lootClass, bDropRate100);
         if(lootClass != nullptr)
         {
-            // Based on the item class spawn the power up
+            UE_LOG(LogTemp, Warning, TEXT("Class = %s"), *lootClass->GetName());
+
+            // Spawn the power up
+            FVector spawnLoc = deadActor->GetActorLocation();
+            FRotator spawnRot = deadActor->GetActorRotation();
+            AActor* powerUpDrop = GetWorld()->SpawnActor<AActor>(lootClass, spawnLoc, spawnRot);
         }
 
         if(targetBallEnemies == 0) {
@@ -72,7 +77,7 @@ void APoppingPalsGameModeBase::HandleGameStart()
 
     // Instantiates an object of the LootSystem class that contains a table for all power ups that can drop, including a nullptr (no drop)
     // Each item in the table contributes to a probability calculation to spawn the droppable item using each of their drop rates
-    lootSystem = LootSystem();
+    lootSystem = LootSystem(itemTable);
 
     // for(int i = 0; i < 100; i++) {
         // TSubclassOf<AActor> randomClass;
